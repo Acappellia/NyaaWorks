@@ -1,0 +1,12 @@
+{
+    "datapack.env.dataVersion": "Latest snapshot",
+    "datapack.features.codeActions": true,
+    "datapack.features.completions": true,
+    "datapack.features.colors": true,
+    "datapack.features.documentHighlighting": true,
+    "datapack.features.formatting": true,
+    "datapack.features.hover": true,
+    "datapack.features.semanticColoring": true,
+    "datapack.features.signatures": true,
+    "datapack.env.dependsOnVanilla": true
+}
