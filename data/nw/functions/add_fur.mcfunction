@@ -16,7 +16,10 @@ data modify storage nw:tmp new_fur_comp_cp set from storage nw:tmp new_fur_comp
 
 data modify storage nw:tmp new_fur_comp."minecraft:container" append value {slot:0,item:{id:"minecraft:soul_campfire",count:1}}
 data modify storage nw:tmp new_fur_comp."minecraft:container"[{slot:0}].item.components."minecraft:custom_data".display_comp set from storage nw:tmp new_fur_comp_cp
-data modify storage nw:tmp new_fur_comp."minecraft:block_entity_data" set value {id:"soul_campfire",CookingTotalTimes:[100,0,0,0]}
+data modify storage nw:tmp new_fur_comp."minecraft:block_entity_data" set value {id:"soul_campfire",CookingTotalTimes:[I;114,514,1919,810]}
+data modify storage nw:tmp new_fur_comp."minecraft:block_state" set value {lit:"false"}
+
+data modify storage nw:tmp new_fur_comp."minecraft:container"[{slot:0}].item.components."minecraft:custom_data".nw_data set value 1
 
 ##slot 9 - state A auto cd
 #define score_holder #item_count

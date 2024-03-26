@@ -1,0 +1,21 @@
+{
+    "criteria": {
+        "place_soul_campfire":{
+            "trigger": "minecraft:placed_block",
+            "conditions": {
+                "location": [
+                    {
+                        "condition": "block_state_property",
+                        "block": "soul_campfire",
+                        "properties": {
+                            "lit": "false"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "nw:place_fur"
+    }
+}
