@@ -12,7 +12,7 @@ data modify storage nw:tmp new_fur_comp."minecraft:custom_model_data" set from s
 data modify storage nw:tmp new_fur_comp."minecraft:lore" set from storage nw:tmp add_fur.components."minecraft:container"[{slot:0}].item.components."minecraft:lore"
 data modify storage nw:tmp new_fur_comp."minecraft:unbreakable" set from storage nw:tmp add_fur.components."minecraft:container"[{slot:0}].item.components."minecraft:unbreakable"
 
-data modify storage nw:tmp new_fur_comp_cp set from storage nw:tmp new_fur_comp_cp
+data modify storage nw:tmp new_fur_comp_cp set from storage nw:tmp new_fur_comp
 
 data modify storage nw:tmp new_fur_comp."minecraft:container" append value {slot:0,item:{id:"minecraft:soul_campfire",count:1}}
 data modify storage nw:tmp new_fur_comp."minecraft:container"[{slot:0}].item.components."minecraft:custom_data".display_comp set from storage nw:tmp new_fur_comp_cp
@@ -20,20 +20,22 @@ data modify storage nw:tmp new_fur_comp."minecraft:block_entity_data" set value 
 
 ##slot 9 - state A auto cd
 #define score_holder #item_count
-scoreboard players set #item_count nw 1
 execute store result score #item_count nw run data get storage nw:tmp add_fur.components."minecraft:container"[{slot:9}].item.count
 
 #define score_holder #check_success
 execute store success score #check_success nw run data modify storage nw:tmp add_fur.components."minecraft:container"[{slot:9}].item.id set value "minecraft:clock"
 execute if score #check_success nw matches 1 run scoreboard players operation #item_count nw *= #10 nw
+tellraw @a {"score":{"name": "#item_count","objective": "nw"}}
+execute unless score #item_count nw matches 1.. run scoreboard players set #item_count nw 1
+tellraw @a {"score":{"name": "#item_count","objective": "nw"}}
 execute store result storage nw:tmp new_fur_comp."minecraft:container"[{slot:0}].item.components."minecraft:custom_data".state_a.auto_cd int 1 run scoreboard players get #item_count nw
 
 ##slot 18 - state B auto cd
-scoreboard players set #item_count nw 1
 execute store result score #item_count nw run data get storage nw:tmp add_fur.components."minecraft:container"[{slot:18}].item.count
 
 execute store success score #check_success nw run data modify storage nw:tmp add_fur.components."minecraft:container"[{slot:18}].item.id set value "minecraft:clock"
 execute if score #check_success nw matches 1 run scoreboard players operation #item_count nw *= #10 nw
+execute unless score #item_count nw matches 1.. run scoreboard players set #item_count nw 1
 execute store result storage nw:tmp new_fur_comp."minecraft:container"[{slot:0}].item.components."minecraft:custom_data".state_b.auto_cd int 1 run scoreboard players get #item_count nw
 
 ##slot 1 - state A model
