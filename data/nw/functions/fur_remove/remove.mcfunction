@@ -2,7 +2,7 @@ playsound block.amethyst_block.break block @a ~ ~ ~ 1 1
 
 ##clone data
 data remove storage nw:tmp fur_comp
-data modify storage nw:tmp fur_comp set from entity @e[type=item_display,distance=..0.1,sort=nearest,limit=1] item.components
+data modify storage nw:tmp fur_comp set from entity @e[type=item_display,tag=nw_display,distance=..0.5,sort=nearest,limit=1] item.components
 
 data remove storage nw:tmp new_fur_comp
 data modify storage nw:tmp new_fur_comp set from storage nw:tmp fur_comp."minecraft:custom_data".display_comp
@@ -22,7 +22,7 @@ loot spawn ~ ~ ~ mine 0 -64 0 stone[minecraft:custom_data={drop_contents:1}]
 setblock 0 -64 0 bedrock
 
 ##kill
-kill @e[type=item_display,tag=nw_display,distance=..0.1,sort=nearest,limit=1]
+kill @e[type=item_display,tag=nw_display,distance=..0.5,sort=nearest,limit=1]
 execute positioned ~ ~0.65 ~ run kill @e[type=item_display,tag=nw_chair,distance=..0.3,sort=nearest]
 kill @s
 
