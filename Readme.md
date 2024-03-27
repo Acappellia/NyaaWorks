@@ -2,7 +2,7 @@
 
 # NyaaWorks 家具系统
 
-当前版本 alpha v0.1.0 - Minecraft 24w12a
+当前版本 alpha v0.1.1 - Minecraft 24w13a
 
 ## 功能简介
 
