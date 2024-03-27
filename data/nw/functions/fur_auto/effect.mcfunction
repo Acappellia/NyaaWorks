@@ -1,0 +1,1 @@
+execute if data storage nw:tmp auto_list[0].effects[0] run function nw:fur_auto/effect_loop

@@ -1,0 +1,2 @@
+$execute if data storage nw:tmp interaction_list[0].isprecise run particle $(particletype) ~ ~1 ~ 0 0 0 0 1
+$execute unless data storage nw:tmp interaction_list[0].isprecise run particle $(particletype) ~ ~0.4 ~ 0.5 0.5 0.5 0 20

@@ -12,14 +12,16 @@ data modify storage nw:tmp new_fur_comp."minecraft:custom_model_data" set from s
 data modify storage nw:tmp new_fur_comp."minecraft:lore" set from storage nw:tmp add_fur.components."minecraft:container"[{slot:0}].item.components."minecraft:lore"
 data modify storage nw:tmp new_fur_comp."minecraft:unbreakable" set from storage nw:tmp add_fur.components."minecraft:container"[{slot:0}].item.components."minecraft:unbreakable"
 
+data remove storage nw:tmp new_fur_comp_cp
 data modify storage nw:tmp new_fur_comp_cp set from storage nw:tmp new_fur_comp
 
-data modify storage nw:tmp new_fur_comp."minecraft:container" append value {slot:0,item:{id:"minecraft:soul_campfire",count:1}}
+data modify storage nw:tmp new_fur_comp."minecraft:container" append value {slot:0,item:{id:"minecraft:stick",count:1,components:{"minecraft:custom_data":{nw_data:1},"minecraft:custom_name":'{"text":"掉出来的木棍","color":"white","italic":false}',"minecraft:lore":['{"text":"因为没有小心摆放，家具散架了","color":"gray","italic":false}','{"text":"大概是修不好了，但兴许能吃？","color":"gray","italic":false}'],"minecraft:food":{saturation_modifier:0.0f,nutrition:5,can_always_eat:true,eat_seconds:8}}}}
+data modify storage nw:tmp new_fur_comp."minecraft:container" append value {slot:1,item:{id:"minecraft:oak_pressure_plate",count:1,components:{"minecraft:custom_data":{nw_data:1},"minecraft:custom_name":'{"text":"掉出来的木板","color":"white","italic":false}',"minecraft:lore":['{"text":"因为没有小心摆放，家具散架了","color":"gray","italic":false}','{"text":"大概是修不好了，但应该能吃！","color":"gray","italic":false}'],"minecraft:food":{saturation_modifier:0.0f,nutrition:5,can_always_eat:true,eat_seconds:12}}}}
+data modify storage nw:tmp new_fur_comp."minecraft:container" append value {slot:2,item:{id:"minecraft:oak_button",count:1,components:{"minecraft:custom_data":{nw_data:1},"minecraft:custom_name":'{"text":"掉出来的木块","color":"white","italic":false}',"minecraft:lore":['{"text":"因为没有小心摆放，家具散架了","color":"gray","italic":false}','{"text":"大概是修不好了，但没准能吃？","color":"gray","italic":false}'],"minecraft:food":{saturation_modifier:0.0f,nutrition:5,can_always_eat:true,eat_seconds:4}}}}
+data modify storage nw:tmp new_fur_comp."minecraft:container" append value {slot:3,item:{id:"minecraft:oak_sign",count:1,components:{"minecraft:custom_data":{nw_data:1},"minecraft:custom_name":'{"text":"掉出来的木牌","color":"white","italic":false}',"minecraft:lore":['{"text":"因为没有小心摆放，家具散架了","color":"gray","italic":false}','{"text":"大概是修不好了，但一定能吃！","color":"gray","italic":false}'],"minecraft:food":{saturation_modifier:0.0f,nutrition:5,can_always_eat:true,eat_seconds:16}}}}
 data modify storage nw:tmp new_fur_comp."minecraft:container"[{slot:0}].item.components."minecraft:custom_data".display_comp set from storage nw:tmp new_fur_comp_cp
-data modify storage nw:tmp new_fur_comp."minecraft:block_entity_data" set value {id:"soul_campfire",CookingTotalTimes:[I;114,514,1919,810]}
-data modify storage nw:tmp new_fur_comp."minecraft:block_state" set value {lit:"false"}
-
-data modify storage nw:tmp new_fur_comp."minecraft:container"[{slot:0}].item.components."minecraft:custom_data".nw_data set value 1
+#data modify storage nw:tmp new_fur_comp."minecraft:block_entity_data" set value {id:"soul_campfire",CookingTotalTimes:[I;114,514,1919,810]}
+data modify storage nw:tmp new_fur_comp."minecraft:block_state" set value {lit:"true"}
 
 ##slot 9 - state A auto cd
 #define score_holder #item_count
@@ -28,9 +30,7 @@ execute store result score #item_count nw run data get storage nw:tmp add_fur.co
 #define score_holder #check_success
 execute store success score #check_success nw run data modify storage nw:tmp add_fur.components."minecraft:container"[{slot:9}].item.id set value "minecraft:clock"
 execute if score #check_success nw matches 1 run scoreboard players operation #item_count nw *= #10 nw
-tellraw @a {"score":{"name": "#item_count","objective": "nw"}}
 execute unless score #item_count nw matches 1.. run scoreboard players set #item_count nw 1
-tellraw @a {"score":{"name": "#item_count","objective": "nw"}}
 execute store result storage nw:tmp new_fur_comp."minecraft:container"[{slot:0}].item.components."minecraft:custom_data".state_a.auto_cd int 1 run scoreboard players get #item_count nw
 
 ##slot 18 - state B auto cd
@@ -163,7 +163,7 @@ data modify storage nw:tmp interation_item set from storage nw:tmp add_fur.compo
 execute if data storage nw:tmp interation_item run function nw:fur_add_interaction
 data modify storage nw:tmp new_fur_comp."minecraft:container"[{slot:0}].item.components."minecraft:custom_data".state_a.auto append from storage nw:tmp interation_to_add
 
-##slot 8,17,24 state B auto
+##slot 8,17,26 state B auto
 data remove storage nw:tmp interation_item
 data remove storage nw:tmp interation_to_add
 data modify storage nw:tmp interation_item set from storage nw:tmp add_fur.components."minecraft:container"[{slot:8}].item
@@ -178,9 +178,13 @@ data modify storage nw:tmp new_fur_comp."minecraft:container"[{slot:0}].item.com
 
 data remove storage nw:tmp interation_item
 data remove storage nw:tmp interation_to_add
-data modify storage nw:tmp interation_item set from storage nw:tmp add_fur.components."minecraft:container"[{slot:24}].item
+data modify storage nw:tmp interation_item set from storage nw:tmp add_fur.components."minecraft:container"[{slot:26}].item
 execute if data storage nw:tmp interation_item run function nw:fur_add_interaction
 data modify storage nw:tmp new_fur_comp."minecraft:container"[{slot:0}].item.components."minecraft:custom_data".state_b.auto append from storage nw:tmp interation_to_add
+
+##check has auto
+execute if data storage nw:tmp new_fur_comp."minecraft:container"[{slot:0}].item.components."minecraft:custom_data".state_a.auto[0] run data modify storage nw:tmp new_fur_comp."minecraft:container"[{slot:0}].item.components."minecraft:custom_data".has_auto set value 1
+execute if data storage nw:tmp new_fur_comp."minecraft:container"[{slot:0}].item.components."minecraft:custom_data".state_b.auto[0] run data modify storage nw:tmp new_fur_comp."minecraft:container"[{slot:0}].item.components."minecraft:custom_data".has_auto set value 1
 
 ##give generated item
 setblock 0 -64 0 bedrock

@@ -8,7 +8,7 @@
                         "condition": "block_state_property",
                         "block": "soul_campfire",
                         "properties": {
-                            "waterlogged": "false"
+                            "waterlogged": "true"
                         }
                     }
                 ]
@@ -16,6 +16,6 @@
         }
     },
     "rewards": {
-        "function": "nw:place_fur"
+        "function": "nw:place_fur_water"
     }
 }

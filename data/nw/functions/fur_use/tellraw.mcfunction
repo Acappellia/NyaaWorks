@@ -1,0 +1,1 @@
+tellraw @s [{"nbt":"interaction_list[0].text","storage": "nw:tmp","interpret": true}]

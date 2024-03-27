@@ -1,0 +1,1 @@
+$damage @r[distance=..10] $(amount)

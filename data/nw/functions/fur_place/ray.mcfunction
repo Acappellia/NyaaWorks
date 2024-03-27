@@ -7,4 +7,5 @@ execute if score #block_check nw matches 4 align xyz positioned ~1.5 ~ ~0.5 run 
 execute if score #block_check nw matches 5 align xyz positioned ~-0.5 ~ ~0.5 run function nw:fur_place/place
 execute if score #block_check nw matches 6 align xyz positioned ~0.5 ~ ~1.5 run function nw:fur_place/place
 execute if score #block_check nw matches 7 align xyz positioned ~0.5 ~ ~-0.5 run function nw:fur_place/place
-execute unless score #block_check nw matches 1.. if entity @s[distance=..70] positioned ^ ^ ^1 run function nw:fur_place/ray
+execute unless score #block_check nw matches 1.. if entity @s[distance=..10] positioned ^ ^ ^1 run function nw:fur_place/ray
+#execute if entity @s[distance=10..] run function nw:fur_place/fail

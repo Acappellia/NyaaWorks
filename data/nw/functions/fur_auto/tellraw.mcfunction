@@ -1,0 +1,1 @@
+tellraw @r[distance=..10] [{"nbt":"interaction_list[0].text","storage": "nw:tmp","interpret": true}]

@@ -1,0 +1,1 @@
+$effect give @r[distance=..10] $(id) $(duration) $(amplifier) true
