@@ -42,10 +42,17 @@ execute unless score #item_count nw matches 1.. run scoreboard players set #item
 execute store result storage nw:tmp new_fur_comp."minecraft:container"[{slot:0}].item.components."minecraft:custom_data".state_b.auto_cd int 1 run scoreboard players get #item_count nw
 
 ##slot 1 - state A model
+data modify storage nw:tmp new_fur_comp."minecraft:container"[{slot:0}].item.components."minecraft:custom_data".state_a.item_id set value "minecraft:soul_campfire"
+data modify storage nw:tmp new_fur_comp."minecraft:container"[{slot:0}].item.components."minecraft:custom_data".state_a.item_id set from storage nw:tmp add_fur.components."minecraft:container"[{slot:1}].item.id
+
 data modify storage nw:tmp new_fur_comp."minecraft:container"[{slot:0}].item.components."minecraft:custom_data".state_a.model set from storage nw:tmp new_fur_comp."minecraft:custom_model_data"
 data modify storage nw:tmp new_fur_comp."minecraft:container"[{slot:0}].item.components."minecraft:custom_data".state_a.model set from storage nw:tmp add_fur.components."minecraft:container"[{slot:1}].item.components."minecraft:custom_model_data"
 
-##slot 5 - state B model
+##slot 5 - state B modelS
+data modify storage nw:tmp new_fur_comp."minecraft:container"[{slot:0}].item.components."minecraft:custom_data".state_b.item_id set value "minecraft:soul_campfire"
+data modify storage nw:tmp new_fur_comp."minecraft:container"[{slot:0}].item.components."minecraft:custom_data".state_b.item_id set from storage nw:tmp add_fur.components."minecraft:container"[{slot:1}].item.id
+data modify storage nw:tmp new_fur_comp."minecraft:container"[{slot:0}].item.components."minecraft:custom_data".state_b.item_id set from storage nw:tmp add_fur.components."minecraft:container"[{slot:5}].item.id
+
 data modify storage nw:tmp new_fur_comp."minecraft:container"[{slot:0}].item.components."minecraft:custom_data".state_b.model set from storage nw:tmp new_fur_comp."minecraft:custom_model_data"
 data modify storage nw:tmp new_fur_comp."minecraft:container"[{slot:0}].item.components."minecraft:custom_data".state_b.model set from storage nw:tmp add_fur.components."minecraft:container"[{slot:1}].item.components."minecraft:custom_model_data"
 data modify storage nw:tmp new_fur_comp."minecraft:container"[{slot:0}].item.components."minecraft:custom_data".state_b.model set from storage nw:tmp add_fur.components."minecraft:container"[{slot:5}].item.components."minecraft:custom_model_data"
