@@ -4,8 +4,8 @@ scoreboard players operation #interaction_cd nw = @e[distance=..5,type=interacti
 execute if score #interaction_cd nw matches 1.. run tellraw @s [{"text": "[","color": "white"},{"text": "NyaaWorks","color": "#22aaff"},{"text": "]","color": "white"},{"text": " 冷却中，剩余 ","color": "gray"},{"score":{"name": "#interaction_cd","objective": "nw"}},{"text": " 秒","color": "gray"}]
 execute if score #interaction_cd nw matches 1.. run return -1
 
-##add default cd
-#scoreboard players set @e[distance=..5,type=interaction,tag=interact_target,limit=1] fur_interaction_cd 1
+##reset cd
+scoreboard players set @e[distance=..5,type=interaction,tag=interact_target,limit=1] fur_interaction_cd 0
 
 ##check state & clone
 #define score_holder #fur_state
