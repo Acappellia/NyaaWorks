@@ -14,7 +14,9 @@
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "custom_data": "{drop_contents:1}"
+                    "predicates": {
+                      "custom_data": "{drop_contents:1}"
+                    }
                   }
                 }
               ]
@@ -23,7 +25,7 @@
               "type": "minecraft:item",
               "functions": [
                 {
-                  "components": [
+                  "include": [
                     "minecraft:custom_name",
                     "minecraft:container",
                     "minecraft:lock",
@@ -34,12 +36,12 @@
                   "source": "block_entity"
                 },
                 {
-                  "function": "copy_custom_data",
+                  "function": "minecraft:copy_custom_data",
                   "ops": [
                     {
                       "op": "replace",
-                      "source": "nw_fur_id",
-                      "target": "BlockEntityTag.nw_fur_id"
+                      "source": "components.\"minecraft:custom_data\".nw_fur_id",
+                      "target": "nw_fur_id"
                     }
                   ],
                   "source": "block_entity"
