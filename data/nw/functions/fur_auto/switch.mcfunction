@@ -1,7 +1,5 @@
 ##get state data
-data remove storage nw:tmp fur_state
-execute if score #fur_state nw matches 1 run data modify storage nw:tmp fur_state set from entity @e[type=item_display,tag=nw_display,distance=..0.5,sort=nearest,limit=1] item.components."minecraft:custom_data".state_b
-execute if score #fur_state nw matches 2 run data modify storage nw:tmp fur_state set from entity @e[type=item_display,tag=nw_display,distance=..0.5,sort=nearest,limit=1] item.components."minecraft:custom_data".state_a
+function nw:fur_use/clone_state with storage nw:tmp fur_info
 
 ##change cmd
 data modify entity @e[type=item_display,tag=nw_display,distance=..0.5,sort=nearest,limit=1] item.id set from storage nw:tmp fur_state.item_id

@@ -1,0 +1,1 @@
+$data modify storage nw:fur_data fur[$(nw_fur_id)].display_comp set from storage nw:tmp new_fur_display_components

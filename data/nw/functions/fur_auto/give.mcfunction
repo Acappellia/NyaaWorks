@@ -1,10 +1,10 @@
-#define score_holder #bundle_count
+scoreboard players reset $max random
+execute store result score $max random if data storage nw:tmp auto_list[0].items[]
+execute unless score $max random matches 1.. run return -1
+scoreboard players remove $max random 1
+scoreboard players set $min random 0
+function nw:random_uniform
+data remove storage nw:tmp random
+execute store result storage nw:tmp random.result int 1 run scoreboard players get $out random
 
-scoreboard players reset #bundle_count nw
-execute store result score #bundle_count nw if data storage nw:tmp auto_list[0].items[]
-execute unless score #bundle_count nw matches 1.. run return -1
-execute store result storage nw:tmp random.max int 1 run scoreboard players remove #bundle_count nw 1
-
-data modify storage nw:tmp random.result set value 0
-function nw:fur_use/give_random with storage nw:tmp random
 function nw:fur_auto/give_item with storage nw:tmp random

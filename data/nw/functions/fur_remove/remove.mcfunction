@@ -1,18 +1,23 @@
 playsound block.amethyst_block.break block @a ~ ~ ~ 1 1
 
+data remove storage nw:tmp fur_info
+execute store result storage nw:tmp fur_info.nw_fur_id int 1 run scoreboard players get @s fur_id
+
 ##clone data
-data remove storage nw:tmp fur_comp
-data modify storage nw:tmp fur_comp set from entity @e[type=item_display,tag=nw_display,distance=..0.5,sort=nearest,limit=1] item.components
+function nw:fur_remove/clone_data with storage nw:tmp fur_info
 
 data remove storage nw:tmp new_fur_comp
 data modify storage nw:tmp new_fur_comp set from storage nw:tmp fur_comp."minecraft:custom_data".display_comp
 
-data modify storage nw:tmp new_fur_comp."minecraft:container" append value {slot:0,item:{id:"minecraft:stick",count:1,components:{"minecraft:custom_data":{nw_data:1},"minecraft:custom_name":'{"text":"掉出来的木棍","color":"white","italic":false}',"minecraft:lore":['{"text":"因为没有小心摆放，家具散架了","color":"gray","italic":false}','{"text":"大概是修不好了，但兴许能吃？","color":"gray","italic":false}'],"minecraft:food":{saturation_modifier:0.0f,nutrition:5,can_always_eat:true,eat_seconds:8}}}}
-data modify storage nw:tmp new_fur_comp."minecraft:container" append value {slot:1,item:{id:"minecraft:oak_pressure_plate",count:1,components:{"minecraft:custom_data":{nw_data:1},"minecraft:custom_name":'{"text":"掉出来的木板","color":"white","italic":false}',"minecraft:lore":['{"text":"因为没有小心摆放，家具散架了","color":"gray","italic":false}','{"text":"大概是修不好了，但应该能吃！","color":"gray","italic":false}'],"minecraft:food":{saturation_modifier:0.0f,nutrition:5,can_always_eat:true,eat_seconds:12}}}}
-data modify storage nw:tmp new_fur_comp."minecraft:container" append value {slot:2,item:{id:"minecraft:oak_button",count:1,components:{"minecraft:custom_data":{nw_data:1},"minecraft:custom_name":'{"text":"掉出来的木块","color":"white","italic":false}',"minecraft:lore":['{"text":"因为没有小心摆放，家具散架了","color":"gray","italic":false}','{"text":"大概是修不好了，但没准能吃？","color":"gray","italic":false}'],"minecraft:food":{saturation_modifier:0.0f,nutrition:5,can_always_eat:true,eat_seconds:4}}}}
-data modify storage nw:tmp new_fur_comp."minecraft:container" append value {slot:3,item:{id:"minecraft:oak_sign",count:1,components:{"minecraft:custom_data":{nw_data:1},"minecraft:custom_name":'{"text":"掉出来的木牌","color":"white","italic":false}',"minecraft:lore":['{"text":"因为没有小心摆放，家具散架了","color":"gray","italic":false}','{"text":"大概是修不好了，但一定能吃！","color":"gray","italic":false}'],"minecraft:food":{saturation_modifier:0.0f,nutrition:5,can_always_eat:true,eat_seconds:16}}}}
+data modify storage nw:tmp new_fur_comp."minecraft:container" append value {slot:0,item:{id:"minecraft:stick",count:1,components:{"minecraft:custom_data":{nw_data:1},"minecraft:custom_name":'{"text":"掉出来的木棍","color":"white","italic":false}',"minecraft:lore":['{"text":"因为没有小心摆放，家具散架了","color":"gray","italic":false}','{"text":"大概是修不好了，但兴许能吃？","color":"gray","italic":false}'],"minecraft:food":{saturation:0.0f,nutrition:5,can_always_eat:true,eat_seconds:8}}}}
+data modify storage nw:tmp new_fur_comp."minecraft:container" append value {slot:1,item:{id:"minecraft:oak_pressure_plate",count:1,components:{"minecraft:custom_data":{nw_data:1},"minecraft:custom_name":'{"text":"掉出来的木板","color":"white","italic":false}',"minecraft:lore":['{"text":"因为没有小心摆放，家具散架了","color":"gray","italic":false}','{"text":"大概是修不好了，但应该能吃！","color":"gray","italic":false}'],"minecraft:food":{saturation:0.0f,nutrition:5,can_always_eat:true,eat_seconds:12}}}}
+data modify storage nw:tmp new_fur_comp."minecraft:container" append value {slot:2,item:{id:"minecraft:oak_button",count:1,components:{"minecraft:custom_data":{nw_data:1},"minecraft:custom_name":'{"text":"掉出来的木块","color":"white","italic":false}',"minecraft:lore":['{"text":"因为没有小心摆放，家具散架了","color":"gray","italic":false}','{"text":"大概是修不好了，但没准能吃？","color":"gray","italic":false}'],"minecraft:food":{saturation:0.0f,nutrition:5,can_always_eat:true,eat_seconds:4}}}}
+data modify storage nw:tmp new_fur_comp."minecraft:container" append value {slot:3,item:{id:"minecraft:oak_sign",count:1,components:{"minecraft:custom_data":{nw_data:1},"minecraft:custom_name":'{"text":"掉出来的木牌","color":"white","italic":false}',"minecraft:lore":['{"text":"因为没有小心摆放，家具散架了","color":"gray","italic":false}','{"text":"大概是修不好了，但一定能吃！","color":"gray","italic":false}'],"minecraft:food":{saturation:0.0f,nutrition:5,can_always_eat:true,eat_seconds:16}}}}
 data modify storage nw:tmp new_fur_comp."minecraft:block_state" set value {lit:"true"}
-data modify storage nw:tmp new_fur_comp."minecraft:container"[{slot:0}].item.components."minecraft:custom_data" set from storage nw:tmp fur_comp."minecraft:custom_data"
+
+##set id
+data modify storage nw:tmp new_fur_comp."minecraft:container"[{slot:0}].item.components."minecraft:custom_data".nw_fur_id set from storage nw:tmp fur_info.nw_fur_id
+data modify storage nw:tmp new_fur_comp."minecraft:custom_data".nw_fur_id set from storage nw:tmp fur_info.nw_fur_id
 
 ##giveback item
 setblock 0 -64 0 bedrock

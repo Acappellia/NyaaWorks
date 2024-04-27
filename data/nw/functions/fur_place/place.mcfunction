@@ -4,13 +4,14 @@ particle flash ~ ~0.5 ~
 particle witch ~ ~0.1 ~ 0 0 0 0.05 20
 #tellraw @s [{"text": "[","color": "white"},{"text": "NyaaWorks","color": "#22aaff"},{"text": "]","color": "white"},{"text": " 已放置家具","color": "yellow"}]
 
-data remove storage nw:tmp fur_comp
-data modify storage nw:tmp fur_comp set from block ~ ~ ~ Items[{Slot:0b}].components
+data remove storage nw:tmp fur_info
+data modify storage nw:tmp fur_info.nw_fur_id set from block ~ ~ ~ Items[{Slot:0b}].components."minecraft:custom_data".nw_fur_id
 
 ##summon item_display & interaction
 #define score_holder #player_rotation
 execute store result score #player_rotation nw run data get entity @s Rotation[0] 1
-execute summon item_display run function nw:fur_place/summon_display
+
+execute summon item_display run function nw:fur_place/summon_display with storage nw:tmp fur_info
 execute positioned ~ ~-0.01 ~ summon interaction run function nw:fur_place/summon_interaction
 
 ##replace block

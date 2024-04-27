@@ -1,0 +1,47 @@
+[
+    {
+        "function": "minecraft:set_lore",
+        "lore": [
+            [
+                {
+                    "text": "[ ",
+                    "color": "dark_gray",
+                    "italic": false
+                }, 
+                {
+                    "text": "已定义家具编号：",
+                    "color": "gray",
+                    "italic": false
+                },
+                {
+                    "score": {
+                        "name": "#fur_id",
+                        "objective": "nw"
+                    },
+                    "color": "white"
+                },
+                {
+                    "text": " ]",
+                    "color": "dark_gray",
+                    "italic": false
+                }
+            ]
+        ],
+        "entity": "this",
+        "mode": "append"
+    },
+    {
+        "function": "minecraft:copy_custom_data",
+        "ops": [
+            {
+                "op": "replace",
+                "source": "fur_info.nw_fur_id",
+                "target": "nw_fur_id"
+            }
+        ],
+        "source": {
+            "type": "storage",
+            "source": "nw:tmp"
+        }
+    }
+]

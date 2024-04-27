@@ -1,8 +1,11 @@
 ##check state & clone
 scoreboard players operation #fur_state nw = @s fur_state
-data remove storage nw:tmp auto_state
-execute if score #fur_state nw matches 1 run data modify storage nw:tmp auto_state set from entity @e[type=item_display,tag=nw_display,distance=..0.5,sort=nearest,limit=1] item.components."minecraft:custom_data".state_a
-execute if score #fur_state nw matches 2 run data modify storage nw:tmp auto_state set from entity @e[type=item_display,tag=nw_display,distance=..0.5,sort=nearest,limit=1] item.components."minecraft:custom_data".state_b
+
+data remove storage nw:tmp fur_info
+execute store result storage nw:tmp fur_info.nw_fur_id int 1 run scoreboard players get @s fur_id
+
+function nw:fur_auto/clone_auto_state with storage nw:tmp fur_info
+
 data remove storage nw:tmp auto_list
 data modify storage nw:tmp auto_list set from storage nw:tmp auto_state.auto
 

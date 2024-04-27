@@ -1,1 +1,0 @@
-$execute store result storage nw:tmp random.result int 1 run random value 0..$(max) 
