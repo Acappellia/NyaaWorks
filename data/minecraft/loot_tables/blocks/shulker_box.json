@@ -27,9 +27,21 @@
                     "minecraft:custom_name",
                     "minecraft:container",
                     "minecraft:lock",
-                    "minecraft:container_loot"
+                    "minecraft:container_loot",
+                    "minecraft:lore"
                   ],
                   "function": "minecraft:copy_components",
+                  "source": "block_entity"
+                },
+                {
+                  "function": "copy_custom_data",
+                  "ops": [
+                    {
+                      "op": "replace",
+                      "source": "nw_fur_id",
+                      "target": "BlockEntityTag.nw_fur_id"
+                    }
+                  ],
                   "source": "block_entity"
                 }
               ],
