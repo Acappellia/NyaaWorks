@@ -1,5 +1,5 @@
 {
-    "datapack.env.dataVersion": "Latest snapshot",
+    "datapack.env.dataVersion": "1.20.6",
     "datapack.features.codeActions": true,
     "datapack.features.completions": true,
     "datapack.features.colors": true,

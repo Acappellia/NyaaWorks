@@ -6,6 +6,7 @@ particle witch ~ ~0.1 ~ 0 0 0 0.05 20
 
 data remove storage nw:tmp fur_info
 data modify storage nw:tmp fur_info.nw_fur_id set from block ~ ~ ~ Items[{Slot:0b}].components."minecraft:custom_data".nw_fur_id
+data modify storage nw:tmp fur_info.nw_fur_color set from block ~ ~ ~ Items[{Slot:0b}].components."minecraft:custom_data".nw_fur_color
 
 ##summon item_display & interaction
 #define score_holder #player_rotation

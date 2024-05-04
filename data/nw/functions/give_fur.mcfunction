@@ -1,10 +1,5 @@
-playsound block.amethyst_block.break block @a ~ ~ ~ 1 1
-
-data remove storage nw:tmp fur_info
-execute store result storage nw:tmp fur_info.nw_fur_id int 1 run scoreboard players get @s fur_id
-
-##clone data
-function nw:fur_remove/clone_data with storage nw:tmp fur_info
+data remove storage nw:tmp fur_comp
+$data modify storage nw:tmp fur_comp set from storage nw:fur_data fur[$(nw_fur_id)].display_comp
 
 data remove storage nw:tmp new_fur_comp
 data modify storage nw:tmp new_fur_comp set from storage nw:tmp fur_comp."minecraft:custom_data".display_comp
@@ -19,25 +14,11 @@ data modify storage nw:tmp new_fur_comp."minecraft:block_state" set value {lit:"
 data modify storage nw:tmp new_fur_comp."minecraft:container"[{slot:0}].item.components."minecraft:custom_data".nw_fur_id set from storage nw:tmp fur_info.nw_fur_id
 data modify storage nw:tmp new_fur_comp."minecraft:custom_data".nw_fur_id set from storage nw:tmp fur_info.nw_fur_id
 
-##set color
-data modify storage nw:tmp new_fur_comp."minecraft:custom_data".nw_fur_color set from entity @e[type=item_display,tag=nw_display,distance=..0.5,sort=nearest,limit=1] item.components."minecraft:dyed_color"
-data modify storage nw:tmp new_fur_comp."minecraft:container"[{slot:0}].item.components."minecraft:custom_data".nw_fur_color set from storage nw:tmp new_fur_comp."minecraft:custom_data".nw_fur_color
-
-data modify storage nw:tmp fur_info.nw_fur_color set from storage nw:tmp new_fur_comp."minecraft:custom_data".nw_fur_color
-
 ##giveback item
 setblock 0 -64 0 bedrock
 setblock 0 -64 0 shulker_box{Items:[{Slot:0b,id:"minecraft:soul_campfire",count:1}]}
 data modify block 0 -64 0 Items[0].components set from storage nw:tmp new_fur_comp
-execute if data storage nw:tmp fur_info.nw_fur_color run item modify block 0 -64 0 container.0 nw:add_color_lore
 loot spawn ~ ~ ~ mine 0 -64 0 stone[minecraft:custom_data={drop_contents:1}]
 setblock 0 -64 0 bedrock
 
-##kill
-kill @e[type=item_display,tag=nw_display,distance=..0.5,sort=nearest,limit=1]
-execute positioned ~ ~0.65 ~ run kill @e[type=item_display,tag=nw_chair,distance=..0.3,sort=nearest]
-kill @s
-
-##setblock
-execute if block ~ ~ ~ #nw:waterloggable[waterlogged=true] run setblock ~ ~ ~ water
-execute unless block ~ ~ ~ water run setblock ~ ~ ~ air
+$tellraw @s [{"text": "[","color": "white"},{"text": "NyaaWorks","color": "#22aaff"},{"text": "]","color": "white"},{"text": " 已获取家具 #","color": "yellow"},{"text":"$(nw_fur_id)","color": "white"}]

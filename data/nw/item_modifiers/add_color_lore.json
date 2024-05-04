@@ -1,0 +1,27 @@
+[
+    {
+        "function": "minecraft:set_lore",
+        "lore": [
+            [
+                {
+                    "text": "🎨 ",
+                    "color": "white",
+                    "italic": false
+                },
+                {
+                    "text": "已染色 - #",
+                    "color": "gray",
+                    "italic": false
+                },
+                {
+                    "nbt": "fur_info.nw_fur_color.rgb",
+                    "storage": "nw:tmp",
+                    "italic": false,
+                    "color": "gray"
+                }
+            ]
+        ],
+        "entity": "this",
+        "mode": "append"
+    }
+]

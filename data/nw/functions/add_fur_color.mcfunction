@@ -1,0 +1,3 @@
+$give @p leather_horse_armor[attribute_modifiers={modifiers:[],show_in_tooltip:false},custom_model_data=5001,dyed_color={rgb:$(color)},custom_data={nw_dye:1},custom_name='[{"text":"颜料刷","color":"yellow","italic":false}]',lore=['[{"text":"能够自由的为所有家具染色！","color":"gray","italic":false}]','[{"text":"需要在","color":"gray","italic":false},{"text":" 家具染色台 ","color":"white","italic":false},{"text":"上使用","color":"gray","italic":false}]']] 1
+
+$tellraw @s [{"text": "[","color": "white"},{"text": "NyaaWorks","color": "#22aaff"},{"text": "]","color": "white"},{"text": " 已创建家具染色","color": "yellow"},{"text": " - #","color": "gray"},{"text":"$(color)","color": "white"}]

@@ -8,7 +8,7 @@ data modify entity @s item.id set from storage nw:tmp fur_comp."minecraft:custom
 #data modify entity @s item.components set from storage nw:tmp fur_comp
 data modify entity @s item.components."minecraft:custom_model_data" set from storage nw:tmp fur_comp."minecraft:custom_data".state_a.model
 data modify entity @s item.components."minecraft:custom_data".nw_fur_id set from storage nw:tmp fur_info.nw_fur_id
-
+data modify entity @s item.components."minecraft:dyed_color" set from storage nw:tmp fur_info.nw_fur_color
 
 ##set rotation
 execute if score #player_rotation nw matches -44..45 run data modify entity @s Rotation[0] set value 0.0f
