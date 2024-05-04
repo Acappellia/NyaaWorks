@@ -1,0 +1,35 @@
+[
+    {
+        "function": "minecraft:set_lore",
+        "lore": [
+            [
+                {
+                    "text": "签名: ",
+                    "color": "gray",
+                    "italic": false
+                },
+                {
+                    "selector": "@s",
+                    "italic": true,
+                    "color": "white"
+                }
+            ]
+        ],
+        "entity": "this",
+        "mode": "append"
+    },
+    {
+        "function": "minecraft:copy_custom_data",
+        "ops": [
+            {
+                "op": "replace",
+                "source": "sign.p_id",
+                "target": "nw_tool_id"
+            }
+        ],
+        "source": {
+            "type": "storage",
+            "source": "nw:tmp"
+        }
+    }
+]

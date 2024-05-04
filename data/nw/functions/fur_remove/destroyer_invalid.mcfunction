@@ -1,0 +1,1 @@
+$tellraw @p[distance=..10,tag=fur_destroyer] [{"text": "[","color": "white"},{"text": "NyaaWorks","color": "#22aaff"},{"text": "]","color": "white"},{"text": " 非本人放置的家具，木锄需要家具主人 ","color": "gray"},{"nbt":"players[$(p_id)].name","storage": "nc:player","color":"white"},{"text": " 的签名","color": "gray"}]

@@ -13,7 +13,10 @@ data modify storage nw:tmp fur_info.nw_fur_color set from block ~ ~ ~ Items[{Slo
 execute store result score #player_rotation nw run data get entity @s Rotation[0] 1
 
 execute summon item_display run function nw:fur_place/summon_display with storage nw:tmp fur_info
+tag @s add fur_placer
 execute positioned ~ ~-0.01 ~ summon interaction run function nw:fur_place/summon_interaction
+tag @s remove fur_placer
+
 
 ##replace block
 execute if data storage nw:tmp fur_comp."minecraft:custom_data".state_a.block run function nw:fur_place/setblock with storage nw:tmp fur_comp."minecraft:custom_data".state_a

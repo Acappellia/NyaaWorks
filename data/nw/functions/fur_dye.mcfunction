@@ -6,10 +6,10 @@ data modify storage nw:tmp mainhand set from entity @s SelectedItem
 data modify storage nw:tmp offhand set from entity @s Inventory[{Slot:-106b}]
 
 ##check hands
-execute unless data storage nw:tmp mainhand.components."minecraft:custom_data".nw_fur_id run tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGears","color": "green"},{"text": "] ","color": "white"},{"text": "请将 任意家具 放置在主手","color": "gray"}]
+execute unless data storage nw:tmp mainhand.components."minecraft:custom_data".nw_fur_id run tellraw @s [{"text": "[","color": "white"},{"text": "NyaaWorks","color": "#22aaff"},{"text": "] ","color": "white"},{"text": "请将 任意家具 放置在主手","color": "gray"}]
 execute unless data storage nw:tmp mainhand.components."minecraft:custom_data".nw_fur_id run return -1
 
-execute unless data storage nw:tmp offhand.components."minecraft:custom_data".nw_dye run tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGears","color": "green"},{"text": "] ","color": "white"},{"text": "请将 颜料刷 放置在副手","color": "gray"}]
+execute unless data storage nw:tmp offhand.components."minecraft:custom_data".nw_dye run tellraw @s [{"text": "[","color": "white"},{"text": "NyaaWorks","color": "#22aaff"},{"text": "] ","color": "white"},{"text": "请将 颜料刷 放置在副手","color": "gray"}]
 execute unless data storage nw:tmp offhand.components."minecraft:custom_data".nw_dye run return -1
 
 ##remove item

@@ -1,0 +1,25 @@
+[
+    {
+        "function": "fill_player_head",
+        "entity": "this"
+    },
+    {
+        "function": "set_attributes",
+        "modifiers": [
+            {
+                "amount": 2,
+                "attribute": "generic.armor_toughness",
+                "slot": "head",
+                "operation": "add_value",
+                "name": "luck"
+            },
+            {
+                "amount": 4,
+                "attribute": "generic.armor",
+                "slot": "head",
+                "operation": "add_value",
+                "name": "luck"
+            }
+        ]
+    }
+]

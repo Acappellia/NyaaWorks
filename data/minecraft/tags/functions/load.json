@@ -1,6 +1,7 @@
 {
     "replace": false,
     "values": [
-        "nw:init"
+        "nw:init",
+        "nc:init"
     ]
 }

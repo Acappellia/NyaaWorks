@@ -17,13 +17,4 @@ scoreboard objectives add fur_interaction_time dummy
 
 scoreboard objectives add nw_player_cd minecraft.custom:time_since_death
 
-# Create scoreboard objective and initialise LCG
-scoreboard objectives add random dummy
-execute unless score #lcg random = #lcg random store result score #lcg random run seed
-
-# Define constants
-scoreboard players set #lcg_a random 1630111353
-scoreboard players set #lcg_c random 1623164762
-scoreboard players set #lcg_m random 2147483647
-
 schedule function nw:slowtick 20t replace

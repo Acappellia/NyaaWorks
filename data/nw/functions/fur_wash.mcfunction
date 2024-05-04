@@ -4,10 +4,10 @@ data remove storage nw:tmp mainhand
 data modify storage nw:tmp mainhand set from entity @s SelectedItem
 
 ##check hands
-execute unless data storage nw:tmp mainhand.components."minecraft:custom_data".nw_fur_id run tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGears","color": "green"},{"text": "] ","color": "white"},{"text": "请将 任意染色后家具 放置在主手","color": "gray"}]
+execute unless data storage nw:tmp mainhand.components."minecraft:custom_data".nw_fur_id run tellraw @s [{"text": "[","color": "white"},{"text": "NyaaWorks","color": "#22aaff"},{"text": "] ","color": "white"},{"text": "请将 任意染色后家具 放置在主手","color": "gray"}]
 execute unless data storage nw:tmp mainhand.components."minecraft:custom_data".nw_fur_id run return -1
 
-execute unless data storage nw:tmp mainhand.components."minecraft:custom_data".nw_fur_color run tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGears","color": "green"},{"text": "] ","color": "white"},{"text": "这个家具没有被染色呢","color": "gray"}]
+execute unless data storage nw:tmp mainhand.components."minecraft:custom_data".nw_fur_color run tellraw @s [{"text": "[","color": "white"},{"text": "NyaaWorks","color": "#22aaff"},{"text": "] ","color": "white"},{"text": "这个家具没有被染色呢","color": "gray"}]
 execute unless data storage nw:tmp mainhand.components."minecraft:custom_data".nw_fur_color run return -1
 
 
