@@ -23,3 +23,4 @@ forceload add 0 0 0 0
 
 ##tick
 schedule function nc:20gt_tick 20t replace
+schedule function nc:backup_tick 72d append
