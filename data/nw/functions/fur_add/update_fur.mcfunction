@@ -3,9 +3,8 @@
 execute store result score #update_fur_id nw run data get storage nw:tmp add_fur.components."minecraft:custom_data".nw_fur_id
 
 ##register item
-execute store result storage nw:tmp fur_info.nw_fur_id int 1 store result storage nw:tmp new_fur_item."minecraft:container"[{slot:0}].item.components."minecraft:custom_data".nw_fur_id int 1 run scoreboard players get #update_fur_id nw
+execute store result storage nw:tmp fur_info.nw_fur_id int 1 store result storage nw:tmp new_fur_item."minecraft:custom_data".nw_fur_id int 1 run scoreboard players get #update_fur_id nw
 data modify storage nw:tmp new_fur_display_components."minecraft:custom_data".nw_fur_id set from storage nw:tmp fur_info.nw_fur_id
-data modify storage nw:tmp new_fur_item."minecraft:custom_data".nw_fur_id set from storage nw:tmp fur_info.nw_fur_id
 
 ##update data
 function nw:fur_add/update_fur_2 with storage nw:tmp fur_info

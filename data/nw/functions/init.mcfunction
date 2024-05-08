@@ -16,5 +16,6 @@ scoreboard objectives add fur_interaction_cd dummy
 scoreboard objectives add fur_interaction_time dummy
 
 scoreboard objectives add nw_player_cd minecraft.custom:time_since_death
+scoreboard objectives add nw_place_cd minecraft.custom:time_since_death
 
 schedule function nw:slowtick 20t replace

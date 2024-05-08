@@ -1,0 +1,18 @@
+{
+    "replace": false,
+    "values": [
+        "air",
+        "cave_air",
+        "void_air",
+        "short_grass",
+        "tall_grass",
+        "fern",
+        "large_fern",
+        "snow",
+        "nether_sprouts",
+        "warped_roots",
+        "crimson_roots",
+        "vine",
+        "lava"
+    ]
+}

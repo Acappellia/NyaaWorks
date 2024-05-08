@@ -10,8 +10,8 @@ execute as @e[distance=..5,type=interaction,tag=nw_fur] store result score @s fu
 execute as @e[distance=..5,type=interaction,tag=nw_fur] if score @s fur_interaction_time = #current_time nw run tag @s add interact_target
 
 ##determine if the point exists
-execute at @e[distance=..5,type=interaction,tag=interact_target,tag=nw_fur,limit=1] positioned ~ ~0.1 ~ run function nw:fur_use/use
+execute at @e[distance=..5,type=interaction,tag=interact_target,tag=nw_fur,limit=1] positioned ~ ~0.1 ~ run function nw:fur_use/checksneak
 tag @e[distance=..5,type=interaction,tag=nw_fur] remove interact_target
 
 ##add interact cd
-scoreboard players set @s nw_player_cd -10
+scoreboard players set @s nw_player_cd -4

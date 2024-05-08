@@ -1,0 +1,20 @@
+{
+    "criteria": {
+        "using_item": {
+            "trigger": "using_item",
+            "conditions": {
+                "item": {
+                    "items": [
+                        "firework_star"
+                    ],
+                    "predicates": {
+                        "custom_data": "{nw_fur:1}"
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "nw:place_fur_use"
+    }
+}

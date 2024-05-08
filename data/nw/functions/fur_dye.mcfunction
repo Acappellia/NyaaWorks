@@ -16,16 +16,16 @@ execute unless data storage nw:tmp offhand.components."minecraft:custom_data".nw
 item modify entity @s weapon.mainhand nw:remove_1
 
 ##change color
-execute if data storage nw:tmp mainhand.components."minecraft:custom_data".nw_fur_color run data remove storage nw:tmp mainhand.components."minecraft:lore"[-1]
+execute if data storage nw:tmp mainhand.components."minecraft:firework_explosion".colors[0] run data remove storage nw:tmp mainhand.components."minecraft:lore"[-1]
 
-data modify storage nw:tmp fur_info.nw_fur_color set from storage nw:tmp offhand.components."minecraft:dyed_color"
+data modify storage nw:tmp fur_info.nw_fur_color set from storage nw:tmp offhand.components."minecraft:firework_explosion"
 
-data modify storage nw:tmp mainhand.components."minecraft:custom_data".nw_fur_color set from storage nw:tmp fur_info.nw_fur_color
-data modify storage nw:tmp mainhand.components."minecraft:container"[{slot:0}].item.components."minecraft:custom_data".nw_fur_color set from storage nw:tmp fur_info.nw_fur_color
+data modify storage nw:tmp mainhand.components."minecraft:firework_explosion" set from storage nw:tmp fur_info.nw_fur_color
+#data modify storage nw:tmp mainhand.components."minecraft:container"[{slot:0}].item.components."minecraft:custom_data".nw_fur_color set from storage nw:tmp fur_info.nw_fur_color
 
 ##giveback item
 setblock 0 -64 0 bedrock
-setblock 0 -64 0 shulker_box{Items:[{Slot:0b,id:"minecraft:soul_campfire",count:1}]}
+setblock 0 -64 0 shulker_box{Items:[{Slot:0b,id:"minecraft:firework_star",count:1}]}
 data modify block 0 -64 0 Items[0].components set from storage nw:tmp mainhand.components
 execute if data storage nw:tmp fur_info.nw_fur_color run item modify block 0 -64 0 container.0 nw:add_color_lore
 loot spawn ~ ~ ~ mine 0 -64 0 stone[minecraft:custom_data={drop_contents:1}]
