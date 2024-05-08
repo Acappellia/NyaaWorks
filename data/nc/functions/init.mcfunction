@@ -1,5 +1,6 @@
 #define storage nc:tmp
 #define storage nc:player
+#define storage nc:items
 
 scoreboard objectives add nc dummy
 
