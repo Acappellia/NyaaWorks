@@ -9,8 +9,8 @@ execute if score #effect_type nw matches 4 run function nw:fur_auto/damage with 
 execute if score #effect_type nw matches 5 run function nw:fur_auto/give
 execute if score #effect_type nw matches 8 run function nw:fur_use/command with storage nw:tmp auto_list[0]
 execute if score #effect_type nw matches 11 run function nw:fur_auto/switch
-execute if score #effect_type nw matches 14 run function nw:fur_use/rotate_c
-execute if score #effect_type nw matches 15 run function nw:fur_use/rotate_cc
+execute if score #effect_type nw matches 14 as @e[type=item_display,tag=nw_display,distance=..0.5,sort=nearest,limit=1] run function nw:fur_auto/rotate_c
+execute if score #effect_type nw matches 15 as @e[type=item_display,tag=nw_display,distance=..0.5,sort=nearest,limit=1] run function nw:fur_auto/rotate_cc
 
 ##loop
 data remove storage nw:tmp auto_list[0]
