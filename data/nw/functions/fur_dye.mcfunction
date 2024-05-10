@@ -35,4 +35,4 @@ setblock 0 -64 0 bedrock
 particle dust{color:[1.000,1.000,1.000],scale:1} ~ ~ ~ 0.8 0.8 0.8 0 30 normal
 playsound minecraft:item.brush.brushing.generic block @a ~ ~ ~ 1 1
 
-tellraw @s [{"text": "[","color": "white"},{"text": "NyaaWorks","color": "#22aaff"},{"text": "]","color": "white"},{"text": " 成功染色","color": "yellow"},{"text": " - #","color": "gray"},{"nbt":"fur_info.nw_fur_color.rgb","storage": "nw:tmp","color": "white"}]
+tellraw @s [{"text": "[","color": "white"},{"text": "NyaaWorks","color": "#22aaff"},{"text": "]","color": "white"},{"text": " 成功染色","color": "yellow"},{"text": " - #","color": "gray"},{"nbt":"fur_info.nw_fur_color.colors[0]","storage": "nw:tmp","color": "white"}]
