@@ -23,7 +23,7 @@
         "ops": [
             {
                 "op": "append",
-                "source": "sign.p_id",
+                "source": "sign",
                 "target": "nw_tool_id"
             }
         ],
