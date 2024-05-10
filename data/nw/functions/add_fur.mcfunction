@@ -51,7 +51,7 @@ execute store result storage nw:tmp new_fur_display_components."minecraft:custom
 data modify storage nw:tmp new_fur_display_components."minecraft:custom_data".state_a.item_id set value "minecraft:firework_star"
 data modify storage nw:tmp new_fur_display_components."minecraft:custom_data".state_a.item_id set from storage nw:tmp add_fur.components."minecraft:container"[{slot:1}].item.id
 
-data modify storage nw:tmp new_fur_display_components."minecraft:custom_data".state_a.model set from storage nw:tmp new_fur_comp."minecraft:custom_model_data"
+data modify storage nw:tmp new_fur_display_components."minecraft:custom_data".state_a.model set from storage nw:tmp new_fur_item."minecraft:custom_model_data"
 data modify storage nw:tmp new_fur_display_components."minecraft:custom_data".state_a.model set from storage nw:tmp add_fur.components."minecraft:container"[{slot:1}].item.components."minecraft:custom_model_data"
 
 ##slot 5 - state B model
@@ -59,7 +59,7 @@ data modify storage nw:tmp new_fur_display_components."minecraft:custom_data".st
 data modify storage nw:tmp new_fur_display_components."minecraft:custom_data".state_b.item_id set from storage nw:tmp add_fur.components."minecraft:container"[{slot:1}].item.id
 data modify storage nw:tmp new_fur_display_components."minecraft:custom_data".state_b.item_id set from storage nw:tmp add_fur.components."minecraft:container"[{slot:5}].item.id
 
-data modify storage nw:tmp new_fur_display_components."minecraft:custom_data".state_b.model set from storage nw:tmp new_fur_comp."minecraft:custom_model_data"
+data modify storage nw:tmp new_fur_display_components."minecraft:custom_data".state_b.model set from storage nw:tmp new_fur_item."minecraft:custom_model_data"
 data modify storage nw:tmp new_fur_display_components."minecraft:custom_data".state_b.model set from storage nw:tmp add_fur.components."minecraft:container"[{slot:1}].item.components."minecraft:custom_model_data"
 data modify storage nw:tmp new_fur_display_components."minecraft:custom_data".state_b.model set from storage nw:tmp add_fur.components."minecraft:container"[{slot:5}].item.components."minecraft:custom_model_data"
 
