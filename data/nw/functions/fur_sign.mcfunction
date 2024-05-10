@@ -14,8 +14,18 @@ execute if data storage nw:tmp mainhand.components."minecraft:custom_data".ng_it
 execute if data storage nw:tmp mainhand.components."minecraft:custom_data".ng_slots run tellraw @s [{"text": "[","color": "white"},{"text": "NyaaWorks","color": "#22aaff"},{"text": "] ","color": "white"},{"text": "这个物品无法签名","color": "gray"}]
 execute if data storage nw:tmp mainhand.components."minecraft:custom_data".ng_slots run return -1
 
-execute if data storage nw:tmp mainhand.components."minecraft:custom_data".nw_tool_id run tellraw @s [{"text": "[","color": "white"},{"text": "NyaaWorks","color": "#22aaff"},{"text": "] ","color": "white"},{"text": "这个物品已经带有签名了","color": "gray"}]
-execute if data storage nw:tmp mainhand.components."minecraft:custom_data".nw_tool_id run return -1
+#execute if data storage nw:tmp mainhand.components."minecraft:custom_data".nw_tool_id run tellraw @s [{"text": "[","color": "white"},{"text": "NyaaWorks","color": "#22aaff"},{"text": "] ","color": "white"},{"text": "这个物品已经带有签名了","color": "gray"}]
+#execute if data storage nw:tmp mainhand.components."minecraft:custom_data".nw_tool_id run return -1
+
+##check signed names
+#define score_holder #tool_dupe
+scoreboard players reset #tool_dupe nw
+data remove storage nw:tmp check_tool_id
+data modify storage nw:tmp check_tool_id set from storage nw:tmp mainhand.components."minecraft:custom_data".nw_tool_id
+execute if data storage nw:tmp check_tool_id[0] run function nw:fur_sign/check_toolid_loop
+
+execute if score #tool_dupe nw matches 1 run tellraw @s [{"text": "[","color": "white"},{"text": "NyaaWorks","color": "#22aaff"},{"text": "] ","color": "white"},{"text": "你已经签过名字了！","color": "gray"}]
+execute if score #tool_dupe nw matches 1 run return -1
 
 ##sign item
 execute store result storage nw:tmp sign.p_id int 1 run scoreboard players get @s p_id
