@@ -28,7 +28,7 @@ setblock 0 -64 0 bedrock
 setblock 0 -64 0 shulker_box{Items:[{Slot:0b,id:"minecraft:firework_star",count:1}]}
 data modify block 0 -64 0 Items[0].components set from storage nw:tmp mainhand.components
 execute if data storage nw:tmp fur_info.nw_fur_color run item modify block 0 -64 0 container.0 nw:add_color_lore
-loot spawn ~ ~ ~ mine 0 -64 0 stone[minecraft:custom_data={drop_contents:1}]
+loot spawn ~ ~1 ~ mine 0 -64 0 stone[minecraft:custom_data={drop_contents:1}]
 setblock 0 -64 0 bedrock
 
 ##effect
