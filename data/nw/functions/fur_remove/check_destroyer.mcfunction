@@ -8,7 +8,7 @@ execute if entity @s[tag=nw_admin] run return -1
 
 ##check player id
 execute if score @s p_id = @p[distance=..10,tag=fur_destroyer] p_id run function nw:fur_remove/remove
-execute if score @s p_id = @p[distance=..10,tag=fur_destroyer] p_id run return 1
+execute unless score @s p_id = @s p_id run return 1
 
 ##check tool id
 #define score_holder #tool_success
