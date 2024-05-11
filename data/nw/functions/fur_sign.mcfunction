@@ -30,6 +30,8 @@ execute if data storage nw:tmp check_tool_id[0] run function nw:fur_sign/check_t
 execute if score #tool_dupe nw matches 1 run tellraw @s [{"text": "[","color": "white"},{"text": "NyaaWorks","color": "#22aaff"},{"text": "] ","color": "white"},{"text": "已更新信任签名的有效期。","color": "white"}]
 execute unless score #tool_dupe nw matches 1 run function nw:fur_sign/adddata
 
+item modify entity @s weapon.mainhand nw:remove_1
+
 ##giveback item
 setblock 0 -64 0 bedrock
 setblock 0 -64 0 shulker_box{Items:[{Slot:0b,id:"minecraft:wooden_hoe",count:1}]}
