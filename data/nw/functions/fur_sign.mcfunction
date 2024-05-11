@@ -44,5 +44,6 @@ setblock 0 -64 0 bedrock
 particle wax_off ~ ~ ~ 1 1 1 0 20 normal
 playsound item.book.page_turn block @a ~ ~ ~ 1 1
 
+execute if score #tool_dupe nw matches 1 run return 1
 tellraw @s [{"text": "[","color": "white"},{"text": "NyaaWorks","color": "#22aaff"},{"text": "]","color": "white"},{"text": " 已为木锄添加信任签名，有效期为 6 小时。","color": "yellow"}]
 tellraw @s [{"text": "[","color": "white"},{"text": "NyaaWorks","color": "#22aaff"},{"text": "]","color": "white"},{"text": " 注意：请谨慎发放带有信任签名的木锄。","color": "gold"}]
