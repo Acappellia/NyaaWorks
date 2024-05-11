@@ -1,0 +1,1 @@
+$execute store result storage nw:tmp mainhand.components."minecraft:custom_data".nw_tool_id[$(index)].sign_time long 1 run time query gametime

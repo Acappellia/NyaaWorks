@@ -18,23 +18,29 @@ execute if data storage nw:tmp mainhand.components."minecraft:custom_data".ng_sl
 #execute if data storage nw:tmp mainhand.components."minecraft:custom_data".nw_tool_id run return -1
 
 ##check signed names
+#define score_holder #tool_id_index
 #define score_holder #tool_dupe
+data remove storage nw:tmp sign
+execute store result storage nw:tmp sign.index int 1 run scoreboard players set #tool_id_index nw 0
 scoreboard players reset #tool_dupe nw
 data remove storage nw:tmp check_tool_id
 data modify storage nw:tmp check_tool_id set from storage nw:tmp mainhand.components."minecraft:custom_data".nw_tool_id
 execute if data storage nw:tmp check_tool_id[0] run function nw:fur_sign/check_toolid_loop
 
-execute if score #tool_dupe nw matches 1 run tellraw @s [{"text": "[","color": "white"},{"text": "NyaaWorks","color": "#22aaff"},{"text": "] ","color": "white"},{"text": "已更新已有信任签名的有效期。","color": "white"}]
-execute if score #tool_dupe nw matches 1 run return -1
+execute if score #tool_dupe nw matches 1 run tellraw @s [{"text": "[","color": "white"},{"text": "NyaaWorks","color": "#22aaff"},{"text": "] ","color": "white"},{"text": "已更新信任签名的有效期。","color": "white"}]
+execute unless score #tool_dupe nw matches 1 run function nw:fur_sign/adddata
 
-##sign item
-execute store result storage nw:tmp sign.p_id int 1 run scoreboard players get @s p_id
-execute store result storage nw:tmp sign.sign_time long 1 run time query gametime
-item modify entity @s weapon.mainhand nw:sign_name
+##giveback item
+setblock 0 -64 0 bedrock
+setblock 0 -64 0 shulker_box{Items:[{Slot:0b,id:"minecraft:wooden_hoe",count:1}]}
+data modify block 0 -64 0 Items[0].components set from storage nw:tmp mainhand.components
+execute unless score #tool_dupe nw matches 1 run item modify block 0 -64 0 container.0 nw:sign_name
+loot spawn ~ ~1 ~ mine 0 -64 0 stone[minecraft:custom_data={drop_contents:1}]
+setblock 0 -64 0 bedrock
 
 ##effect
 particle wax_off ~ ~ ~ 1 1 1 0 20 normal
 playsound item.book.page_turn block @a ~ ~ ~ 1 1
 
-tellraw @s [{"text": "[","color": "white"},{"text": "NyaaWorks","color": "#22aaff"},{"text": "]","color": "white"},{"text": " 已为手中的木锄添加信任签名，有效期为 6 小时。","color": "yellow"}]
+tellraw @s [{"text": "[","color": "white"},{"text": "NyaaWorks","color": "#22aaff"},{"text": "]","color": "white"},{"text": " 已为木锄添加信任签名，有效期为 6 小时。","color": "yellow"}]
 tellraw @s [{"text": "[","color": "white"},{"text": "NyaaWorks","color": "#22aaff"},{"text": "]","color": "white"},{"text": " 注意：请谨慎发放带有信任签名的木锄。","color": "gold"}]
