@@ -4,7 +4,7 @@
         "lore": [
             [
                 {
-                    "text": "签名: ",
+                    "text": "- ",
                     "color": "gray",
                     "italic": false
                 },
@@ -12,6 +12,11 @@
                     "selector": "@s",
                     "italic": true,
                     "color": "white"
+                },
+                {
+                    "text": " 已添加信任签名",
+                    "color": "gray",
+                    "italic": true
                 }
             ]
         ],
