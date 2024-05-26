@@ -1,5 +1,8 @@
 #define storage nw:tmp
 #define storage nw:fur_data
+#define storage nw:fur_data_buildin
+
+#function nw:init_buildin_fur
 
 forceload add 0 0 0 0
 
@@ -10,6 +13,7 @@ scoreboard players set #10 nw 10
 execute unless score #fur_id nw matches -2147483648..2147483647 run scoreboard players set #fur_id nw -1
 
 scoreboard objectives add fur_id dummy
+scoreboard objectives add fur_id_buildin dummy
 scoreboard objectives add fur_state dummy
 scoreboard objectives add fur_auto_cd dummy
 scoreboard objectives add fur_interaction_cd dummy

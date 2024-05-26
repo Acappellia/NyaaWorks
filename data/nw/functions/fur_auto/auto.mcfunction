@@ -2,9 +2,9 @@
 scoreboard players operation #fur_state nw = @s fur_state
 
 data remove storage nw:tmp fur_info
-execute store result storage nw:tmp fur_info.nw_fur_id int 1 run scoreboard players get @s fur_id
 
-function nw:fur_auto/clone_auto_state with storage nw:tmp fur_info
+execute if score @s fur_id = @s fur_id run function nw:fur_auto/copydata
+execute if score @s fur_id_buildin = @s fur_id_buildin run function nw:fur_auto/copydata_buildin
 
 data remove storage nw:tmp auto_list
 data modify storage nw:tmp auto_list set from storage nw:tmp auto_state.auto

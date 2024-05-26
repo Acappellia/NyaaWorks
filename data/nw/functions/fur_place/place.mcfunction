@@ -28,7 +28,8 @@ playsound block.wood.place block @a ~ ~ ~
 #define score_holder #player_rotation
 execute store result score #player_rotation nw run data get entity @s Rotation[0] 1
 
-execute summon item_display run function nw:fur_place/summon_display with storage nw:tmp fur_info
+execute if data storage nw:tmp fur_info.nw_fur_id summon item_display run function nw:fur_place/summon_display with storage nw:tmp fur_info
+execute if data storage nw:tmp fur_info.nw_fur_id_buildin summon item_display run function nw:fur_place/summon_display_buildin with storage nw:tmp fur_info
 tag @s add fur_placer
 execute positioned ~ ~-0.01 ~ summon interaction run function nw:fur_place/summon_interaction
 tag @s remove fur_placer

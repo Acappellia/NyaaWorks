@@ -1,5 +1,7 @@
 ##get state data
-function nw:fur_use/clone_state with storage nw:tmp fur_info
+execute if data storage nw:tmp fur_info.nw_fur_id run function nw:fur_use/clone_state with storage nw:tmp fur_info
+execute if data storage nw:tmp fur_info.nw_fur_id_buildin run function nw:fur_use/clone_state_buildin with storage nw:tmp fur_info
+
 
 ##change cmd
 data modify entity @e[type=item_display,tag=nw_display,distance=..0.5,sort=nearest,limit=1] item.id set from storage nw:tmp fur_state.item_id

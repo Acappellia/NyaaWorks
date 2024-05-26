@@ -1,0 +1,3 @@
+data remove storage nw:tmp interaction_list
+$execute if score #fur_state nw matches 1 run data modify storage nw:tmp interaction_list set from storage nw:fur_data_buildin fur[$(nw_fur_id_buildin)].display_comp."minecraft:custom_data".state_a.interaction
+$execute if score #fur_state nw matches 2 run data modify storage nw:tmp interaction_list set from storage nw:fur_data_buildin fur[$(nw_fur_id_buildin)].display_comp."minecraft:custom_data".state_b.interaction

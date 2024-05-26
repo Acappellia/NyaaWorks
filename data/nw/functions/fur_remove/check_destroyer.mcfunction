@@ -1,5 +1,5 @@
 ##bypass creative
-execute if entity @p[distance=..10,tag=fur_destroyer,gamemode=creative] run function nw:fur_remove/remove
+execute if entity @p[distance=..10,tag=fur_destroyer,gamemode=creative] run function nw:fur_remove/remove_checktype
 execute if entity @p[distance=..10,tag=fur_destroyer,gamemode=creative] run return 1
 
 ##check unbreakable
@@ -7,7 +7,7 @@ execute if entity @s[tag=nw_admin] run tellraw @p[distance=..10,tag=fur_destroye
 execute if entity @s[tag=nw_admin] run return -1
 
 ##check player id
-execute if score @s p_id = @p[distance=..10,tag=fur_destroyer] p_id run function nw:fur_remove/remove
+execute if score @s p_id = @p[distance=..10,tag=fur_destroyer] p_id run function nw:fur_remove/remove_checktype
 execute unless score @s p_id = @s p_id run return 1
 
 ##check tool id

@@ -201,8 +201,7 @@ data modify storage nw:tmp new_fur_display_components."minecraft:custom_data".st
 
 ##check id on shulker box
 data remove storage nw:tmp fur_info
-execute if data storage nw:tmp add_fur.components."minecraft:custom_data".nw_fur_id run function nw:fur_add/update_fur
-execute unless data storage nw:tmp add_fur.components."minecraft:custom_data".nw_fur_id run function nw:fur_add/new_fur
+function nw:fur_add/new_fur_buildin
 
 ##give generated item
 setblock 0 -64 0 bedrock
