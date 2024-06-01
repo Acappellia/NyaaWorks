@@ -9,6 +9,7 @@ execute unless data storage nw:tmp add_fur.components."minecraft:container" run 
 
 ##slot 0 - name, lore, model, unbrekable, orientation
 data modify storage nw:tmp new_fur_item."minecraft:custom_name" set from storage nw:tmp add_fur.components."minecraft:container"[{slot:0}].item.components."minecraft:custom_name"
+data modify storage nw:tmp new_fur_item."minecraft:item_name" set from storage nw:tmp add_fur.components."minecraft:container"[{slot:0}].item.components."minecraft:item_name"
 data modify storage nw:tmp new_fur_item."minecraft:custom_model_data" set from storage nw:tmp add_fur.components."minecraft:container"[{slot:0}].item.components."minecraft:custom_model_data"
 data modify storage nw:tmp new_fur_item."minecraft:lore" set from storage nw:tmp add_fur.components."minecraft:container"[{slot:0}].item.components."minecraft:lore"
 data modify storage nw:tmp new_fur_item."minecraft:unbreakable" set from storage nw:tmp add_fur.components."minecraft:container"[{slot:0}].item.components."minecraft:unbreakable"

@@ -52,7 +52,8 @@
 对于红色（a1-a3）、深绿色（b1-b3）和深蓝色（e1-e3）的部分，每一格具有明确的作用：
 
 - a1：这格物品的如下组件（component）会被物品形式的家具所继承：
-    - "minecraft:custom_name" 物品的名称
+    - "minecraft:custom_name" 物品的自定义名称
+    - "minecraft:item_name" 物品的名称
     - "minecraft:custom_model_data" 物品的自定义模型编号
     - "minecraft:lore" 物品的铭文
     - "minecraft:unbreakable" 物品是否不可破坏（未来应用于家具）
