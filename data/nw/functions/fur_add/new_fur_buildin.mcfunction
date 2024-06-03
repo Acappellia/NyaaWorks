@@ -2,6 +2,9 @@
 execute store result storage nw:tmp fur_info.nw_fur_id_buildin int 1 store result storage nw:tmp new_fur_item."minecraft:custom_data".nw_fur_id_buildin int 1 if data storage nw:fur_data_buildin fur[]
 data modify storage nw:tmp new_fur_display_components."minecraft:custom_data".nw_fur_id_buildin set from storage nw:tmp fur_info.nw_fur_id_buildin
 
+##add default color
+data modify storage nw:tmp nw:new_fur_item."minecraft:firework_explosion" set value {shape:"small_ball",colors:[I;16777215]}
+
 ##append data
 data modify storage nw:fur_data_buildin fur append value {}
 data modify storage nw:fur_data_buildin fur[-1].fur_id_buildin set from storage nw:tmp fur_info.nw_fur_id_buildin

@@ -17,7 +17,7 @@ item modify entity @s weapon.mainhand nw:remove_1
 ##clear color
 data remove storage nw:tmp mainhand.components."minecraft:lore"[-1]
 
-data remove storage nw:tmp mainhand.components."minecraft:firework_explosion"
+data modify storage nw:tmp mainhand.components."minecraft:firework_explosion".colors[0] set value 16777215
 #data remove storage nw:tmp mainhand.components."minecraft:container"[{slot:0}].item.components."minecraft:custom_data".nw_fur_color
 
 ##giveback item
