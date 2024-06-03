@@ -1,7 +1,7 @@
 playsound block.wood.break block @a ~ ~ ~ 1 1
 
 data remove storage nw:tmp fur_info
-execute store result storage nw:tmp fur_info.nw_fur_id_buildin byte 1 run scoreboard players get @s fur_id_buildin
+execute store result storage nw:tmp fur_info.nw_fur_id_buildin int 1 run scoreboard players get @s fur_id_buildin
 
 ##clone data
 function nw:fur_remove/clone_data_buildin with storage nw:tmp fur_info
