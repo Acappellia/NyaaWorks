@@ -1,0 +1,1 @@
+tellraw @s [{"text": "[","color": "white"},{"text": "NyaaWorks","color": "#22aaff"},{"text": "]","color": "white"},{"text": " 已加入新的家具！打开配方书查看","color": "yellow"}]
