@@ -7,28 +7,30 @@
       "item": "brush"
     },
     {
-      "item": "white_dye"
+      "item": "pink_dye"
+    },
+    {
+      "item": "honey_bottle"
     }
   ],
   "result": {
     "count": 1,
     "id": "minecraft:firework_star",
     "components": {
-      "minecraft:item_name": [
-        { "text": "颜料刷" }
-      ],
+      "minecraft:item_name": "粉红色颜料刷",
       "minecraft:lore": [
-        [{"text":"能够自由的为所有家具染色！","color":"gray","italic":false}],
-        [{"text":"右键已放置的家具或在","color":"gray","italic":false},{"text":" 家具染色台 ","color":"white","italic":false},{"text":"上使用","color":"gray","italic":false}]
+        "[{\"text\":\"能够自由的为所有家具染色！\",\"color\":\"gray\",\"italic\":false}]",
+        "[{\"text\":\"右键已放置的家具或在\",\"color\":\"gray\",\"italic\":false},{\"text\":\" 家具染色台 \",\"color\":\"white\",\"italic\":false},{\"text\":\"上使用\",\"color\":\"gray\",\"italic\":false}]"
       ],
-      "minecraft:custom_model_data": "5001",
+      "minecraft:custom_model_data": 5001,
       "minecraft:custom_data": { "nw_dye": 1 },
       "minecraft:hide_additional_tooltip": {},
       "minecraft:firework_explosion": {
         "shape": "small_ball",
-        "colors": [16777215]
+        "colors": [15961002]
       },
-      "minecraft:max_damage": 125
+      "minecraft:max_damage": 125,
+      "minecraft:max_stack_size": 1
     }
   },
   "group": "nw:dye_brush"

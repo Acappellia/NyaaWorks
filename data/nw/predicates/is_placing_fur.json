@@ -11,7 +11,7 @@
                 "equipment": {
                     "mainhand": {
                         "predicates": {
-                            "minecraft:custom_data": "{nw_fur:1}"
+                            "minecraft:custom_data": "{nw_fur:1b}"
                         }
                     }
                 }
@@ -27,7 +27,7 @@
                 "equipment": {
                     "offhand": {
                         "predicates": {
-                            "minecraft:custom_data": "{nw_fur:1}"
+                            "minecraft:custom_data": "{nw_fur:1b}"
                         }
                     }
                 }

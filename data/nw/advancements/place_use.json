@@ -8,7 +8,7 @@
                         "firework_star"
                     ],
                     "predicates": {
-                        "custom_data": "{nw_fur:1}"
+                        "custom_data": "{nw_fur:1b}"
                     }
                 }
             }

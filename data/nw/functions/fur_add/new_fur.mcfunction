@@ -3,7 +3,7 @@ execute store result storage nw:tmp fur_info.nw_fur_id int 1 store result storag
 data modify storage nw:tmp new_fur_display_components."minecraft:custom_data".nw_fur_id set from storage nw:tmp fur_info.nw_fur_id
 
 ##add default color
-data modify storage nw:tmp nw:new_fur_item."minecraft:firework_explosion" set value {shape:"small_ball",colors:[I;16777215]}
+data modify storage nw:tmp new_fur_item."minecraft:firework_explosion" set value {shape:"small_ball",colors:[I;16777215]}
 
 ##update shulker box
 item modify entity @s weapon.mainhand nw:add_box_info

@@ -10,7 +10,7 @@ data remove storage nw:tmp new_fur_comp
 data modify storage nw:tmp new_fur_comp set from storage nw:tmp fur_comp."minecraft:custom_data".display_comp
 data modify storage nw:tmp new_fur_comp."minecraft:food" set value {nutrition:0,saturation:0,eat_seconds:1000000.0,can_always_eat:true}
 data modify storage nw:tmp new_fur_comp."minecraft:hide_additional_tooltip" set value {}
-data modify storage nw:tmp new_fur_comp."minecraft:custom_data".nw_fur set value 1
+data modify storage nw:tmp new_fur_comp."minecraft:custom_data".nw_fur set value 1b
 
 #data modify storage nw:tmp new_fur_comp."minecraft:container" append value {slot:0,item:{id:"minecraft:stick",count:1,components:{"minecraft:custom_data":{nw_data:1},"minecraft:custom_name":'{"text":"掉出来的木棍","color":"white","italic":false}',"minecraft:lore":['{"text":"因为没有小心摆放，家具散架了","color":"gray","italic":false}','{"text":"大概是修不好了，但兴许能吃？","color":"gray","italic":false}'],"minecraft:food":{saturation:0.0f,nutrition:5,can_always_eat:true,eat_seconds:8}}}}
 #data modify storage nw:tmp new_fur_comp."minecraft:container" append value {slot:1,item:{id:"minecraft:oak_pressure_plate",count:1,components:{"minecraft:custom_data":{nw_data:1},"minecraft:custom_name":'{"text":"掉出来的木板","color":"white","italic":false}',"minecraft:lore":['{"text":"因为没有小心摆放，家具散架了","color":"gray","italic":false}','{"text":"大概是修不好了，但应该能吃！","color":"gray","italic":false}'],"minecraft:food":{saturation:0.0f,nutrition:5,can_always_eat:true,eat_seconds:12}}}}
@@ -28,11 +28,16 @@ data modify storage nw:tmp new_fur_comp."minecraft:firework_explosion" set from 
 
 data modify storage nw:tmp fur_info.nw_fur_color set from storage nw:tmp new_fur_comp."minecraft:firework_explosion"
 
+##check dyed color
+#define score_holder #dyed_color
+scoreboard players reset #dyed_color nw
+execute store result score #dyed_color nw run data get storage nw:tmp fur_info.nw_fur_color.colors[0]
+
 ##giveback item
 setblock 0 -64 0 bedrock
 setblock 0 -64 0 shulker_box{Items:[{Slot:0b,id:"minecraft:firework_star",count:1}]}
 data modify block 0 -64 0 Items[0].components set from storage nw:tmp new_fur_comp
-execute if data storage nw:tmp fur_info.nw_fur_color run item modify block 0 -64 0 container.0 nw:add_color_lore
+execute unless score #dyed_color nw matches 16777215 run item modify block 0 -64 0 container.0 nw:add_color_lore
 loot spawn ~ ~ ~ mine 0 -64 0 stone[minecraft:custom_data={drop_contents:1}]
 setblock 0 -64 0 bedrock
 

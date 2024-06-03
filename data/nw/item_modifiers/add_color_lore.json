@@ -9,15 +9,9 @@
                     "italic": false
                 },
                 {
-                    "text": "已染色 - #",
+                    "text": "已染色",
                     "color": "gray",
                     "italic": false
-                },
-                {
-                    "nbt": "fur_info.nw_fur_color.colors[0]",
-                    "storage": "nw:tmp",
-                    "italic": false,
-                    "color": "gray"
                 }
             ]
         ],
