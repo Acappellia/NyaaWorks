@@ -14,7 +14,7 @@ data modify storage nw:tmp new_fur_item."minecraft:custom_model_data" set from s
 data modify storage nw:tmp new_fur_item."minecraft:lore" set from storage nw:tmp add_fur.components."minecraft:container"[{slot:0}].item.components."minecraft:lore"
 data modify storage nw:tmp new_fur_item."minecraft:unbreakable" set from storage nw:tmp add_fur.components."minecraft:container"[{slot:0}].item.components."minecraft:unbreakable"
 
-execute if data storage nw:tmp add_fur.components."minecraft:container"[{slot:0}].item.components."minecraft:enchantments".levels."minecraft:multishot" run data modify storage nw:tmp new_fur_item."minecraft:custom_data".nw_fur_orient set value 1
+execute if data storage nw:tmp add_fur.components."minecraft:container"[{slot:0}].item.components."minecraft:enchantments".levels."minecraft:multishot" run data modify storage nw:tmp new_fur_item."minecraft:custom_data".nw_fur_orient set value 1b
 
 data modify storage nw:tmp new_fur_display_components."minecraft:custom_data".display_comp set from storage nw:tmp new_fur_item
 

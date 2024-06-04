@@ -37,7 +37,7 @@ execute store result score #dyed_color nw run data get storage nw:tmp fur_info.n
 setblock 0 -64 0 bedrock
 setblock 0 -64 0 shulker_box{Items:[{Slot:0b,id:"minecraft:firework_star",count:1}]}
 data modify block 0 -64 0 Items[0].components set from storage nw:tmp new_fur_comp
-execute unless score #dyed_color nw matches 16777215 run item modify block 0 -64 0 container.0 nw:add_color_lore
+execute unless score #dyed_color nw matches 16777215 unless score #dyed_color nw matches 0 run item modify block 0 -64 0 container.0 nw:add_color_lore
 loot spawn ~ ~ ~ mine 0 -64 0 stone[minecraft:custom_data={drop_contents:1}]
 setblock 0 -64 0 bedrock
 
