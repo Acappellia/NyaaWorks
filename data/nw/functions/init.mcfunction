@@ -2,7 +2,7 @@
 #define storage nw:fur_data
 #define storage nw:fur_data_buildin
 
-#function nw:init_buildin_data
+execute unless data storage nw:fur_data_buildin fur run function nw:init_buildin_data
 
 forceload add 0 0 0 0
 
