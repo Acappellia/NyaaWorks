@@ -30,6 +30,7 @@
         "colors": [8439583]
       },
       "minecraft:max_damage": 125,
+      "minecraft:damage": 0,
       "minecraft:max_stack_size": 1
     }
   },

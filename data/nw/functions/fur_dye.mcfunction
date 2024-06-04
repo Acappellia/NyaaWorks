@@ -14,7 +14,9 @@ execute unless data storage nw:tmp offhand.components."minecraft:custom_data".nw
 
 ##remove item
 item modify entity @s weapon.mainhand nw:remove_1
-item modify entity @s weapon.offhand nw:brush_damage_1
+execute if entity @s[gamemode=!creative] run item modify entity @s weapon.offhand nw:brush_damage_1
+execute if predicate nw:offhand_no_damage at @s run playsound entity.item.break player @a ~ ~ ~
+execute if predicate nw:offhand_no_damage run item modify entity @s weapon.offhand nw:remove_1
 
 ##check dyed color
 #define score_holder #dyed_color
