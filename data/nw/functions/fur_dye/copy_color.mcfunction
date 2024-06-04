@@ -1,0 +1,1 @@
+$item modify entity @s weapon.mainhand {function: "minecraft:set_components", components: {"minecraft:firework_explosion": $(nw_fur_color)}}

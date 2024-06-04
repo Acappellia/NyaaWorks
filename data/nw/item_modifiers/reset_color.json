@@ -1,0 +1,13 @@
+[
+    {
+        "function": "minecraft:set_components",
+        "components": {
+            "minecraft:firework_explosion" : {
+                "shape": "small_ball",
+                "colors": [
+                    16777215
+                ]
+            }
+        }
+    }
+]

@@ -1,0 +1,11 @@
+[
+    {
+        "function": "minecraft:set_lore",
+        "lore": [
+            ""
+        ],
+        "entity": "this",
+        "mode": "replace_section",
+        "offset": -1
+    }
+]

@@ -16,21 +16,15 @@ execute store result score #dyed_color nw run data get storage nw:tmp mainhand.c
 execute if score #dyed_color nw matches 16777215 run tellraw @s [{"text": "[","color": "white"},{"text": "NyaaWorks","color": "#22aaff"},{"text": "] ","color": "white"},{"text": "这个家具没有被染色呢","color": "gray"}]
 execute if score #dyed_color nw matches 16777215 run return -1
 
-##remove item
-item modify entity @s weapon.mainhand nw:remove_1
-
 ##clear color
-data remove storage nw:tmp mainhand.components."minecraft:lore"[-1]
+item modify entity @s weapon.mainhand nw:reset_color
 
-data modify storage nw:tmp mainhand.components."minecraft:firework_explosion".colors[0] set value 16777215
-#data remove storage nw:tmp mainhand.components."minecraft:container"[{slot:0}].item.components."minecraft:custom_data".nw_fur_color
-
-##giveback item
-setblock 0 -64 0 bedrock
-setblock 0 -64 0 shulker_box{Items:[{Slot:0b,id:"minecraft:firework_star",count:1}]}
-data modify block 0 -64 0 Items[0].components set from storage nw:tmp mainhand.components
-loot spawn ~ ~1 ~ mine 0 -64 0 stone[minecraft:custom_data={drop_contents:1}]
-setblock 0 -64 0 bedrock
+##remove lore
+data remove storage nw:tmp fur_info
+data modify storage nw:tmp fur_info.lore set from storage nw:tmp mainhand.components."minecraft:lore"
+data remove storage nw:tmp fur_info.lore[-1]
+item modify entity @s weapon.mainhand {function: "minecraft:set_components", components: {"minecraft:lore": []}}
+execute if data storage nw:tmp fur_info.lore[0] run function nw:fur_dye/remove_last_lore with storage nw:tmp fur_info
 
 ##effect
 particle splash ~ ~ ~ 0.5 0.5 0.5 0 30 normal
