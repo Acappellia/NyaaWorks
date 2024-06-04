@@ -15,7 +15,7 @@ data modify storage nw:tmp new_fur_comp."minecraft:custom_data".nw_fur set value
 
 ##set id & color
 #data modify storage nw:tmp new_fur_comp."minecraft:container"[{slot:0}].item.components."minecraft:custom_data".nw_fur_id set from storage nw:tmp fur_info.nw_fur_id
-$data modify storage nw:tmp new_fur_comp."minecraft:custom_data".nw_fur_id_buildin set value $(nw_fur_id_buildin)b
+$data modify storage nw:tmp new_fur_comp."minecraft:custom_data".nw_fur_id_buildin set value $(nw_fur_id_buildin)
 
 ##add default color
 data modify storage nw:tmp new_fur_comp."minecraft:firework_explosion" set value {shape:"small_ball",colors:[I;16777215]}
