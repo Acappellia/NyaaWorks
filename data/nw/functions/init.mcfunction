@@ -8,6 +8,7 @@ forceload add 0 0 0 0
 
 scoreboard objectives add nw dummy
 scoreboard players set #10 nw 10
+scoreboard players set #2 nw 2
 
 #define score_holder #fur_id
 execute unless score #fur_id nw matches -2147483648..2147483647 run scoreboard players set #fur_id nw -1
@@ -18,6 +19,7 @@ scoreboard objectives add fur_state dummy
 scoreboard objectives add fur_auto_cd dummy
 scoreboard objectives add fur_interaction_cd dummy
 scoreboard objectives add fur_interaction_time dummy
+scoreboard objectives add fur_rotation dummy
 
 scoreboard objectives add nw_player_cd minecraft.custom:time_since_death
 scoreboard objectives add nw_place_cd minecraft.custom:time_since_death
