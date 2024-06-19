@@ -10,13 +10,15 @@
                 "amount": 2,
                 "attribute": "generic.armor_toughness",
                 "slot": "head",
-                "operation": "add_value"
+                "operation": "add_value",
+                "id": "nc:skull_player1"
             },
             {
                 "amount": 4,
                 "attribute": "generic.armor",
                 "slot": "head",
-                "operation": "add_value"
+                "operation": "add_value",
+                "id": "nc:skull_player2"
             }
         ]
     }
