@@ -1,6 +1,4 @@
 {
     "function": "enchant_randomly",
-    "enchantments": [
-        "multishot"
-    ]
+    "options": "multishot"
 }
