@@ -1,0 +1,31 @@
+{
+    "condition": "any_of",
+    "terms": [
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "equipment": {
+                    "mainhand": {
+                        "predicates": {
+                            "minecraft:custom_data": "{nw_fur111:1b}"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "equipment": {
+                    "offhand": {
+                        "predicates": {
+                            "minecraft:custom_data": "{nw_fur111:1b}"
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,2 @@
+execute if entity @e[distance=..0.1,type=interaction,tag=nw_fur] run scoreboard players set #ray_can_place nw 1
+execute unless block ~ ~ ~ #nw:all_blocks_replace run scoreboard players set #ray_can_place nw 1

@@ -20,7 +20,10 @@ execute store result score @s fur_auto_cd run data get storage nw:tmp fur_state.
 
 ##check has auto
 tag @s remove nw_auto
+tag @s remove nw_action
 execute if data storage nw:tmp fur_state.auto[0] run tag @s add nw_auto
+execute if data storage nw:tmp fur_state.interaction[0] run tag @s add nw_action
+
 ##change block
 scoreboard players set #place_inwater nw 0
 execute if block ~ ~ ~ #nw:waterloggable[waterlogged=true] run scoreboard players set #place_inwater nw 1

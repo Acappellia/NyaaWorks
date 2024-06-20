@@ -5,10 +5,10 @@ execute if score @s nw_player_cd matches ..-1 run return -1
 ##check sneak
 #define score_holder #check_placing
 scoreboard players reset #check_placing nw
-execute unless predicate nw:is_placing_fur run scoreboard players set #check_placing nw 0
-execute if predicate nw:is_placing_fur run scoreboard players set #check_placing nw 1
+execute unless predicate nw:is_sneaking run scoreboard players set #check_placing nw 0
+execute if predicate nw:is_sneaking run scoreboard players set #check_placing nw 1
 
-execute if score #check_placing nw matches 1 at @s run function nw:place_fur_use
+execute if score #check_placing nw matches 1 at @s run function nw:block_place/check_hand
 execute if score #check_placing nw matches 1 run return 1
 
 #define score_holder #current_time

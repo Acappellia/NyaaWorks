@@ -1,0 +1,1 @@
+$setblock ~ ~ ~ $(block)[axis=$(axis)]

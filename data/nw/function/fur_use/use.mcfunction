@@ -1,3 +1,7 @@
+##check tag
+execute unless entity @s[tag=nw_action] as @p[distance=..6,tag=fur_user] at @s run function nw:block_place/check_hand
+execute unless entity @s[tag=nw_action] run return 3
+
 ##check hand 
 data remove storage nw:tmp mainhand
 data modify storage nw:tmp mainhand set from entity @p[distance=..6,tag=fur_user] SelectedItem

@@ -1,0 +1,12 @@
+{
+    "replace": false,
+    "values": [
+        "#minecraft:stairs",
+        "#minecraft:trapdoors",
+        "#minecraft:slabs",
+        "#minecraft:logs",
+        "#minecraft:planks",
+        "piston",
+        "loom"
+    ]
+}
