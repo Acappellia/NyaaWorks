@@ -4,15 +4,15 @@ execute store result score #player_rotation nw run data get entity @s Rotation[0
 #define score_holder #player_pitch
 execute store result score #player_pitch nw run data get entity @s Rotation[1] 1
 
-execute if score #player_rotation nw matches -44..45 run data modify storage nw:tmp block_place.facing set value "south"
+execute if score #player_rotation nw matches -44..45 run data modify storage nw:tmp block_place.facing set value "north"
 #execute if score #player_rotation nw matches -44..45 run data modify storage nw:tmp block_place.axis set value "z"
-execute if score #player_rotation nw matches 46..135 run data modify storage nw:tmp block_place.facing set value "west"
+execute if score #player_rotation nw matches 46..135 run data modify storage nw:tmp block_place.facing set value "east"
 #execute if score #player_rotation nw matches 46..135 run data modify storage nw:tmp block_place.axis set value "x"
-execute if score #player_rotation nw matches 136.. run data modify storage nw:tmp block_place.facing set value "north"
+execute if score #player_rotation nw matches 136.. run data modify storage nw:tmp block_place.facing set value "south"
 #execute if score #player_rotation nw matches 136.. run data modify storage nw:tmp block_place.axis set value "z"
-execute if score #player_rotation nw matches ..-135 run data modify storage nw:tmp block_place.facing set value "north"
+execute if score #player_rotation nw matches ..-135 run data modify storage nw:tmp block_place.facing set value "south"
 #execute if score #player_rotation nw matches ..-135 run data modify storage nw:tmp block_place.axis set value "z"
-execute if score #player_rotation nw matches -134..-45 run data modify storage nw:tmp block_place.facing set value "east"
+execute if score #player_rotation nw matches -134..-45 run data modify storage nw:tmp block_place.facing set value "west"
 #execute if score #player_rotation nw matches -134..-45 run data modify storage nw:tmp block_place.axis set value "x"
 
 #execute if score #player_pitch nw matches 45.. run data modify storage nw:tmp block_place.facing set value "up"

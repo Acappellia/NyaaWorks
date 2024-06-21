@@ -1,6 +1,31 @@
 {
     "replace": false,
     "values": [
-        "loom"
+        "#minecraft:fence_gates",
+        "carved_pumpkin",
+        "jack_o_lantern",
+        "bee_nest",
+        "stonecutter",
+        "grindstone",
+        "loom",
+        "furnace",
+        "smoker",
+        "blast_furnace",
+        "campfire",
+        "soul_campfire",
+        "anvil",
+        "chipped_anvil",
+        "damaged_anvil",
+        "bell",
+        "beehive",
+        "decorated_pot",
+        "chiseled_bookshelf",
+        "lectern",
+        "chest",
+        "ender_chest",
+        "vault",
+        "end_portal_frame",
+        "calibrated_sculk_sensor",
+        "trapped_chest"
     ]
 }

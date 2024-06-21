@@ -10,19 +10,19 @@ execute if score #player_rotation nw matches 46..135 run data modify storage nw:
 #execute if score #player_rotation nw matches 46..135 run data modify storage nw:tmp block_place.axis set value "x"
 execute if score #player_rotation nw matches 136.. run data modify storage nw:tmp block_place.facing set value "south"
 #execute if score #player_rotation nw matches 136.. run data modify storage nw:tmp block_place.axis set value "z"
-execute if score #player_rotation nw matches ..-135 run data modify storage nw:tmp block_place.facing set value "sout"
+execute if score #player_rotation nw matches ..-135 run data modify storage nw:tmp block_place.facing set value "south"
 #execute if score #player_rotation nw matches ..-135 run data modify storage nw:tmp block_place.axis set value "z"
 execute if score #player_rotation nw matches -134..-45 run data modify storage nw:tmp block_place.facing set value "west"
 #execute if score #player_rotation nw matches -134..-45 run data modify storage nw:tmp block_place.axis set value "x"
 
-execute if score #player_pitch nw matches 45.. run data modify storage nw:tmp block_place.facing set value "up"
+#execute if score #player_pitch nw matches 45.. run data modify storage nw:tmp block_place.facing set value "up"
 #execute if score #player_pitch nw matches 45.. run data modify storage nw:tmp block_place.axis set value "y"
-execute if score #player_pitch nw matches ..-45 run data modify storage nw:tmp block_place.facing set value "down"
+#execute if score #player_pitch nw matches ..-45 run data modify storage nw:tmp block_place.facing set value "down"
 #execute if score #player_pitch nw matches ..-45 run data modify storage nw:tmp block_place.axis set value "y"
-#execute if score #player_pitch nw matches ..-1 run data modify storage nw:tmp block_place.half set value "top"
+execute if score #player_pitch nw matches ..-1 run data modify storage nw:tmp block_place.half set value "top"
 #execute if score #player_pitch nw matches ..-1 run data modify storage nw:tmp block_place.type set value "top"
-#execute if score #player_pitch nw matches 0.. run data modify storage nw:tmp block_place.half set value "bottom"
+execute if score #player_pitch nw matches 0.. run data modify storage nw:tmp block_place.half set value "bottom"
 #execute if score #player_pitch nw matches 0.. run data modify storage nw:tmp block_place.type set value "bottom"
 
-execute unless score #place_block_waterloggable nw matches 1 run function nw:block_place/setblock_4face_2 with storage nw:tmp block_place
-execute if score #place_block_waterloggable nw matches 1 run function nw:block_place/setblock_4face_2_waterloggable with storage nw:tmp block_place
+execute unless score #place_block_waterloggable nw matches 1 run function nw:block_place/setblock_stair_2 with storage nw:tmp block_place
+execute if score #place_block_waterloggable nw matches 1 run function nw:block_place/setblock_stair_2_waterloggable with storage nw:tmp block_place

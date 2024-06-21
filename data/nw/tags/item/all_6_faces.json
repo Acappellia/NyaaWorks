@@ -1,6 +1,14 @@
 {
     "replace": false,
     "values": [
-        "piston"
+        "lightning_rod",
+        "end_rod",
+        "barrel",
+        "piston",
+        "sticky_piston",
+        "dispenser",
+        "dropper",
+        "observer"
+
     ]
 }

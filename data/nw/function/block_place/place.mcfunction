@@ -29,3 +29,4 @@ execute if score #place_block_type nw matches 2 run function nw:block_place/setb
 execute if score #place_block_type nw matches 3 run function nw:block_place/setblock_6face
 execute if score #place_block_type nw matches 4 run function nw:block_place/setblock_stair
 execute if score #place_block_type nw matches 5 run function nw:block_place/setblock_slab
+execute if score #place_block_type nw matches 6 run function nw:block_place/setblock_trapdoor
