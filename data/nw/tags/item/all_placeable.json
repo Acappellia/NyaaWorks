@@ -373,6 +373,9 @@
         "spawner",
         "trial_spawner",
         "barrier",
-        "light"
+        "light",
+        "flower_pot",
+        "#minecraft:candles",
+        "iron_bars"
     ]
 }

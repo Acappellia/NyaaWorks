@@ -8,7 +8,10 @@
         "sticky_piston",
         "dispenser",
         "dropper",
-        "observer"
-
+        "observer",
+        "small_amethyst_bud",
+        "medium_amethyst_bud",
+        "large_amethyst_bud",
+        "amethyst_cluster"
     ]
 }

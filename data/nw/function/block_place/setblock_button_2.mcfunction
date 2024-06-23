@@ -1,0 +1,1 @@
+$setblock ~ ~ ~ $(block)[face=floor,facing=$(facing)]

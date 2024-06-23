@@ -24,5 +24,4 @@ execute if score #player_pitch nw matches ..-1 run data modify storage nw:tmp bl
 execute if score #player_pitch nw matches 0.. run data modify storage nw:tmp block_place.half set value "bottom"
 #execute if score #player_pitch nw matches 0.. run data modify storage nw:tmp block_place.type set value "bottom"
 
-execute unless score #place_block_waterloggable nw matches 1 run function nw:block_place/setblock_stair_2 with storage nw:tmp block_place
-execute if score #place_block_waterloggable nw matches 1 run function nw:block_place/setblock_stair_2_waterloggable with storage nw:tmp block_place
+function nw:block_place/setblock_stair_2_waterloggable with storage nw:tmp block_place

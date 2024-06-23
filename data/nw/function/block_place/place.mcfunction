@@ -30,3 +30,11 @@ execute if score #place_block_type nw matches 3 run function nw:block_place/setb
 execute if score #place_block_type nw matches 4 run function nw:block_place/setblock_stair
 execute if score #place_block_type nw matches 5 run function nw:block_place/setblock_slab
 execute if score #place_block_type nw matches 6 run function nw:block_place/setblock_trapdoor
+execute if score #place_block_type nw matches 7 run function nw:block_place/setblock_button
+execute if score #place_block_type nw matches 8 run function nw:block_place/setblock_banner
+execute if score #place_block_type nw matches 9 run function nw:block_place/setblock_sign
+execute if score #place_block_type nw matches 10 run function nw:block_place/setblock_hanging_sign
+execute if score #place_block_type nw matches 11 run function nw:block_place/setblock_vine
+execute if score #place_block_type nw matches 12 run function nw:block_place/setblock_glow_lichen
+execute if score #place_block_type nw matches 13 run function nw:block_place/setblock_sculk_vein
+execute if score #place_block_type nw matches 14 run function nw:block_place/setblock_skull

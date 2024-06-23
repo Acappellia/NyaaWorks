@@ -1,1 +1,0 @@
-$setblock ~ ~ ~ $(block)[type=$(half)]
