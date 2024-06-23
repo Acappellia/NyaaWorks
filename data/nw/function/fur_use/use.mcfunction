@@ -1,15 +1,12 @@
 ##check transfer
 #define score_holder #transfer_success
 scoreboard players reset #transfer_success nw
+scoreboard players reset #transfer_type nw
 execute if score @s fur_transfer_target matches 0.. run scoreboard players set #transfer_type nw 1
 execute if score @s fur_transfer_target_buildin matches 0.. run scoreboard players set #transfer_type nw 2
 execute if score #transfer_type nw matches 1 run function nw:fur_transfer/transfer
 execute if score #transfer_type nw matches 2 run function nw:fur_transfer/transfer_buildin
 execute if score #transfer_success nw matches 1 run return 4
-
-##check tag
-execute unless entity @s[tag=nw_action] as @p[distance=..6,tag=fur_user] at @s run function nw:block_place/check_hand
-execute unless entity @s[tag=nw_action] run return 3
 
 ##check hand 
 data remove storage nw:tmp mainhand
@@ -18,6 +15,10 @@ execute if data storage nw:tmp mainhand.components."minecraft:custom_data".nw_dy
 execute if data storage nw:tmp mainhand.components."minecraft:custom_data".nw_tool run function nw:fur_edit/check_tool
 execute if data storage nw:tmp mainhand.components."minecraft:custom_data".nw_tool run return 2
 execute if data storage nw:tmp mainhand.components."minecraft:custom_data".nw_dye run return 2
+
+##check tag
+execute unless entity @s[tag=nw_action] as @p[distance=..6,tag=fur_user] at @s run function nw:block_place/check_hand
+execute unless entity @s[tag=nw_action] run return 3
 
 ##check cooldown
 #define score_holder #interaction_cd

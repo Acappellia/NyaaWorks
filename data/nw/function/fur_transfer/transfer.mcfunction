@@ -51,7 +51,7 @@ execute if data storage nw:tmp fur_state.block run function nw:fur_place/setbloc
 execute unless data storage nw:tmp fur_state.block run function nw:fur_place/setblock_air
 
 ##effect
-playsound block.stone.place block @a ~ ~ ~ 1 1
+playsound minecraft:entity.item_frame.place block @a ~ ~ ~ 1 0.8
 
 ##success
 scoreboard players set #transfer_success nw 1
