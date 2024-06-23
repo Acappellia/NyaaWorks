@@ -1,0 +1,1 @@
+$scoreboard players set @s fur_transfer_target $(nw_fur_transfer_target)

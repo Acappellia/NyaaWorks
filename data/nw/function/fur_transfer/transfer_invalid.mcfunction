@@ -1,0 +1,1 @@
+$tellraw @p[distance=..10,tag=fur_user] [{"text": "[","color": "white"},{"text": "NyaaWorks","color": "#22aaff"},{"text": "]","color": "white"},{"text": " 未找到有效的信任签名。请联系家具主人 ","color": "gray"},{"nbt":"players[$(p_id)].name","storage": "nc:player","color":"white"},{"text": " 获取信任签名。","color": "gray"}]

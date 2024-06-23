@@ -13,6 +13,9 @@ scoreboard players set #2 nw 2
 #define score_holder #fur_id
 execute unless score #fur_id nw matches -2147483648..2147483647 run scoreboard players set #fur_id nw -1
 
+scoreboard objectives add fur_transfer_target dummy
+scoreboard objectives add fur_transfer_target_buildin dummy
+
 scoreboard objectives add fur_id dummy
 scoreboard objectives add fur_id_buildin dummy
 scoreboard objectives add fur_state dummy

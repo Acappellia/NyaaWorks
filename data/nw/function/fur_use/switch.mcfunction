@@ -4,6 +4,7 @@ execute if data storage nw:tmp fur_info.nw_fur_id_buildin run function nw:fur_us
 
 ##change cmd
 data modify entity @s item.id set from storage nw:tmp fur_state.item_id
+data remove entity @s item.components."minecraft:custom_model_data"
 data modify entity @s item.components."minecraft:custom_model_data" set from storage nw:tmp fur_state.model
 
 ##intearaction

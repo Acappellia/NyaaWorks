@@ -8,6 +8,8 @@ execute store result score @s fur_auto_cd run data get storage nw:tmp fur_comp."
 scoreboard players set @s fur_state 1
 execute if data storage nw:tmp fur_info.nw_fur_id store result score @s fur_id run data get storage nw:tmp fur_info.nw_fur_id
 execute if data storage nw:tmp fur_info.nw_fur_id_buildin store result score @s fur_id_buildin run data get storage nw:tmp fur_info.nw_fur_id_buildin
+execute if data storage nw:tmp fur_info.nw_fur_transfer_target run function nw:fur_place/set_transfer_target with storage nw:tmp fur_info
+execute if data storage nw:tmp fur_info.nw_fur_transfer_target_buildin run function nw:fur_place/set_transfer_target_buildin with storage nw:tmp fur_info
 scoreboard players operation @s p_id = @p[distance=..10,tag=fur_placer] p_id
 
 ##tag

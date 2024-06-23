@@ -1,0 +1,3 @@
+$data modify storage nw:tmp fur_info.nw_fur_orient set from storage nw:fur_data fur[$(nw_fur_id)].display_comp."minecraft:custom_data".nw_fur_orient
+$data modify storage nw:tmp fur_info.nw_fur_transfer_target_buildin set from storage nw:fur_data fur[$(nw_fur_id)].display_comp."minecraft:custom_data".nw_fur_transfer_target_buildin
+$data modify storage nw:tmp fur_info.nw_fur_transfer_target set from storage nw:fur_data fur[$(nw_fur_id)].display_comp."minecraft:custom_data".nw_fur_transfer_target

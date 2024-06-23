@@ -17,8 +17,12 @@ execute unless score #fur_hand nw matches 1 if data storage nw:tmp offhand.compo
 
 execute unless score #fur_hand nw matches 1..2 run return -1
 
+##get extra info
+execute if data storage nw:tmp fur_info.nw_fur_id run function nw:fur_place/get_info with storage nw:tmp fur_info
+execute if data storage nw:tmp fur_info.nw_fur_id_buildin run function nw:fur_place/get_info_buildin with storage nw:tmp fur_info
+
 ##effects
-playsound block.wood.place block @a ~ ~ ~
+playsound block.stone.place block @a ~ ~ ~
 #playsound block.respawn_anchor.charge block @a ~ ~ ~ 1 2
 #particle flash ~ ~0.5 ~
 #particle witch ~ ~0.1 ~ 0 0 0 0.05 20

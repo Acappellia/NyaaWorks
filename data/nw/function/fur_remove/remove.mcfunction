@@ -1,4 +1,4 @@
-playsound block.wood.break block @a ~ ~ ~ 1 1
+playsound block.stone.break block @a ~ ~ ~ 1 1
 
 data remove storage nw:tmp fur_info
 execute store result storage nw:tmp fur_info.nw_fur_id int 1 run scoreboard players get @s fur_id
@@ -23,7 +23,7 @@ data modify storage nw:tmp new_fur_comp."minecraft:custom_data".nw_fur set value
 data modify storage nw:tmp new_fur_comp."minecraft:custom_data".nw_fur_id set from storage nw:tmp fur_info.nw_fur_id
 
 ##set color
-data modify storage nw:tmp new_fur_comp."minecraft:firework_explosion" set from entity @e[type=item_display,tag=nw_display,distance=..0.5,sort=nearest,limit=1] item.components."minecraft:firework_explosion"
+data modify storage nw:tmp new_fur_comp."minecraft:firework_explosion" set from entity @n[type=item_display,tag=nw_display,distance=..0.5] item.components."minecraft:firework_explosion"
 #data modify storage nw:tmp new_fur_comp."minecraft:container"[{slot:0}].item.components."minecraft:custom_data".nw_fur_color set from storage nw:tmp new_fur_comp."minecraft:custom_data".nw_fur_color
 
 data modify storage nw:tmp fur_info.nw_fur_color set from storage nw:tmp new_fur_comp."minecraft:firework_explosion"
@@ -42,7 +42,7 @@ loot spawn ~ ~ ~ mine 0 -64 0 stone[minecraft:custom_data={drop_contents:1}]
 setblock 0 -64 0 bedrock
 
 ##kill
-kill @e[type=item_display,tag=nw_display,distance=..0.5,sort=nearest,limit=1]
+kill @n[type=item_display,tag=nw_display,distance=..0.5]
 execute positioned ~ ~0.65 ~ run kill @e[type=item_display,tag=nw_chair,distance=..0.3,sort=nearest]
 kill @s
 

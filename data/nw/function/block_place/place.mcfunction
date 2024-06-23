@@ -10,7 +10,7 @@ execute unless score #place_inwater nw matches 0..1 run return -1
 execute if entity @e[distance=..0.1,type=interaction,tag=nw_fur] run return -1
 
 ##effects
-playsound block.wood.place block @a ~ ~ ~
+playsound block.stone.place block @a ~ ~ ~
 
 ##check hands
 #define score_holder #place_block_type
