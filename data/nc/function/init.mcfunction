@@ -15,7 +15,7 @@ scoreboard players set #lcg_c random 1623164762
 scoreboard players set #lcg_m random 2147483647
 
 ##player id
-scoreboard objectives add p_id dummy 
+scoreboard objectives add p_id dummy
 #define score_holder #player_id
 execute unless score #player_id nc = #player_id nc run scoreboard players set #player_id nc -1
 

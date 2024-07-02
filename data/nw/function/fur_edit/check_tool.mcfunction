@@ -1,6 +1,8 @@
 #define score_holder #player_is_sneaking
 scoreboard players reset #player_is_sneaking nw
 execute as @p[distance=..6,tag=fur_user] if predicate nw:is_sneaking run scoreboard players set #player_is_sneaking nw 1
+#NOT functioning rn bc sneak-cilck is returned before
+
 execute if data storage nw:tmp mainhand.components."minecraft:custom_data".nw_reset as @n[type=item_display,tag=nw_display,distance=..0.5] run function nw:fur_edit/reset
 execute if data storage nw:tmp mainhand.components."minecraft:custom_data".nw_scale as @n[type=item_display,tag=nw_display,distance=..0.5] run function nw:fur_edit/scale
 execute if data storage nw:tmp mainhand.components."minecraft:custom_data".nw_move_up as @n[type=item_display,tag=nw_display,distance=..0.5] run function nw:fur_edit/move_up
