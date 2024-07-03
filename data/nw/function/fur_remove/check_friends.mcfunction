@@ -1,0 +1,1 @@
+$execute if data storage nc:player players[$(target_id)].friends.$(self_id) run return 2

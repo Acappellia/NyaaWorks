@@ -1,5 +1,9 @@
-execute unless score @s p_id = @p[distance=..10,tag=fur_user] p_id run tellraw @p[distance=..10,tag=fur_user] [{"text": "[","color": "white"},{"text": "NyaaWorks","color": "#22aaff"},{"text": "]","color": "white"},{"text": " 只有家具主人可为家具染色","color": "gray"}]
-execute unless score @s p_id = @p[distance=..10,tag=fur_user] p_id run return -1
+##check fur_user
+#define score_holder #dye_user
+scoreboard players reset #dye_user nw
+execute store result score #dye_user nw run function nw:fur_dye/check_user
+execute unless score #dye_user nw matches 2 run function nw:fur_dye/user_invalid
+execute unless score #dye_user nw matches 2 run return 1
 
 execute as @p[distance=..10,tag=fur_user,gamemode=!creative] run function nw:fur_dye/damage
 
