@@ -6,7 +6,7 @@ execute if score @s p_id = #friend_id nw run tellraw @s [{"text": "[","color": "
 execute if score @s p_id = #friend_id nw run return -1
 
 ##add friends
-tag @s add nw_friend_tome
+tag @s add nw_friend_slate
 data remove storage nw:tmp p_info
 execute store result storage nw:tmp p_info.target_id int 1 run scoreboard players get @s p_id
 scoreboard players operation @s fur_friend_id = #friend_id nw
