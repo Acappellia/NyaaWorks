@@ -1,0 +1,1 @@
+$data modify storage nc:player players[$(playerid)].name set from storage nc:player uuid_check[0].name

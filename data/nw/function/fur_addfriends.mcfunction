@@ -1,0 +1,1 @@
+execute as @n[distance=..5,type=interaction,tag=interact_target] at @s run function nw:fur_friend/add_friends

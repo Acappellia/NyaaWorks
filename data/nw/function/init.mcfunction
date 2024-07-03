@@ -19,6 +19,8 @@ execute unless score #allow_unsafe_placement nw matches 0..1 run scoreboard play
 scoreboard objectives add fur_transfer_target dummy
 scoreboard objectives add fur_transfer_target_buildin dummy
 
+scoreboard objectives add fur_friend_id dummy
+
 scoreboard objectives add fur_id dummy
 scoreboard objectives add fur_id_buildin dummy
 scoreboard objectives add fur_state dummy
