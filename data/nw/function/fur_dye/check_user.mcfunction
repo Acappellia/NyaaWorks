@@ -1,3 +1,5 @@
+execute if entity @p[distance=..10,tag=fur_user,gamemode=creative] run return 2
+
 execute if score @s p_id = @p[distance=..10,tag=fur_user] p_id run return 2
 
 ##check friends
