@@ -2,13 +2,18 @@
 #define storage nw:fur_data
 #define storage nw:fur_data_buildin
 
-execute unless data storage nw:fur_data_buildin fur run function nw:init_buildin_data
-
 forceload add 0 0 0 0
 
 scoreboard objectives add nw dummy
 scoreboard players set #10 nw 10
 scoreboard players set #2 nw 2
+
+scoreboard objectives add nw_version dummy
+#define score_holder #nw_version
+#define score_holder #current_version
+scoreboard players set #current_version nw_version 103
+execute unless score #nw_version nw_version = #current_version nw_version run function nw:init_buildin_data
+scoreboard players operation #nw_version nw_version = #current_version nw_version
 
 #define score_holder #fur_id
 execute unless score #fur_id nw matches -2147483648..2147483647 run scoreboard players set #fur_id nw -1

@@ -1,7 +1,7 @@
 {
     "criteria": {
-        "auto": {
-            "trigger": "location"
+        "imp": {
+            "trigger": "impossible"
         }
     },
     "rewards": {
@@ -654,8 +654,8 @@
             "nw:furniture_960",
             "nw:furniture_961",
             "nw:furniture_962",
-            "nw:furniture_963"
-        ],
-        "function": "nw:unlock_recipe_1"
+            "nw:furniture_963",
+            "nw:furniture_964"
+        ]
     }
 }
