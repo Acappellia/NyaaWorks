@@ -1,6 +1,19 @@
 {
     "pack": {
         "pack_format": 48,
-        "description": "NyaaWorks v1.3 - 1.21"
+        "description": [
+            {
+                "text": "【 NyaaWorks | 喵工坊 】",
+                "color": "white"
+            },
+            {
+                "text": "\n家具模组数据包 ",
+                "color": "blue"
+            },
+            {
+                "text": "v1.3 - MC 1.21",
+                "color": "gray"
+            }
+        ]
     }
 }
