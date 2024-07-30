@@ -15,6 +15,6 @@ execute as @e[distance=..5,type=interaction,tag=nw_fur] if score @s fur_interact
 
 ##determine if the point exists
 tag @s add fur_destroyer
-execute as @e[distance=..5,type=interaction,tag=interact_target,tag=nw_fur,limit=1] at @s positioned ~ ~0.1 ~ run function nw:fur_remove/check_destroyer
+execute as @e[distance=..5,type=interaction,tag=interact_target,tag=nw_fur,limit=1] at @s positioned ~ ~0.1 ~ run function nw:fur_remove/check_destroyer_maimai
 tag @s remove fur_destroyer
 tag @e[distance=..5,type=interaction,tag=nw_fur] remove interact_target

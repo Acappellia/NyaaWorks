@@ -8,12 +8,9 @@ scoreboard objectives add nw dummy
 scoreboard players set #10 nw 10
 scoreboard players set #2 nw 2
 
-scoreboard objectives add nw_version dummy
-#define score_holder #nw_version
-#define score_holder #current_version
-scoreboard players set #current_version nw_version 10302
-execute unless score #nw_version nw_version = #current_version nw_version run function nw:init_buildin_data
-scoreboard players operation #nw_version nw_version = #current_version nw_version
+function nw:init_buildin_data
+
+scoreboard objectives add p_team dummy
 
 #define score_holder #fur_id
 execute unless score #fur_id nw matches -2147483648..2147483647 run scoreboard players set #fur_id nw -1
@@ -38,3 +35,5 @@ scoreboard objectives add nw_player_cd minecraft.custom:time_since_death
 scoreboard objectives add nw_place_cd minecraft.custom:time_since_death
 
 schedule function nw:slowtick 20t replace
+
+function nw:init_team

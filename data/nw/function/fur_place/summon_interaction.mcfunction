@@ -12,8 +12,13 @@ execute if data storage nw:tmp fur_info.nw_fur_transfer_target run function nw:f
 execute if data storage nw:tmp fur_info.nw_fur_transfer_target_buildin run function nw:fur_place/set_transfer_target_buildin with storage nw:tmp fur_info
 scoreboard players operation @s p_id = @p[distance=..10,tag=fur_placer] p_id
 
+##update team
+execute as @p[distance=..10,tag=fur_placer] run function nw:player_update_team
+scoreboard players operation @s p_team = @p[distance=..10,tag=fur_placer] p_team
+
 ##tag
 tag @s add nw_fur
 execute if data storage nw:tmp fur_comp."minecraft:custom_data".display_comp."minecraft:unbreakable" run tag @s add nw_admin
+execute if entity @p[distance=..10,tag=fur_placer,gamemode=creative] run tag @s add nw_admin
 execute if data storage nw:tmp fur_comp."minecraft:custom_data".state_a.auto[0] run tag @s add nw_auto
 execute if data storage nw:tmp fur_comp."minecraft:custom_data".state_a.interaction[0] run tag @s add nw_action

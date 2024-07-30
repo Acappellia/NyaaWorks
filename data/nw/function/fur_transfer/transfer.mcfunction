@@ -6,7 +6,7 @@ execute if score #check_tool nw matches 1 run return -1
 ##check player
 #define score_holder #transfer_check
 scoreboard players reset #transfer_check nw
-function nw:fur_transfer/transfer_checkuser
+function nw:fur_transfer/transfer_checkuser_mmz
 execute unless score #transfer_check nw matches 1 run return -1
 
 ##get state data
