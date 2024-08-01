@@ -1,5 +1,5 @@
 data remove storage nw:tmp fur_comp
-$data modify storage nw:tmp fur_comp set from storage nw:fur_data fur[$(nw_fur_id)].display_comp
+$data modify storage nw:tmp fur_comp set from storage nw:fur_data fur[$(id)].display_comp
 
 data remove storage nw:tmp new_fur_comp
 data modify storage nw:tmp new_fur_comp set from storage nw:tmp fur_comp."minecraft:custom_data".display_comp
@@ -15,7 +15,7 @@ data modify storage nw:tmp new_fur_comp."minecraft:custom_data".nw_fur set value
 
 ##set id & color
 #data modify storage nw:tmp new_fur_comp."minecraft:container"[{slot:0}].item.components."minecraft:custom_data".nw_fur_id set from storage nw:tmp fur_info.nw_fur_id
-$data modify storage nw:tmp new_fur_comp."minecraft:custom_data".nw_fur_id set value $(nw_fur_id)
+$data modify storage nw:tmp new_fur_comp."minecraft:custom_data".nw_fur_id set value $(id)
 
 ##add default color
 data modify storage nw:tmp new_fur_comp."minecraft:firework_explosion" set value {shape:"small_ball",colors:[I;16777215]}
@@ -27,4 +27,4 @@ data modify block 0 -64 0 Items[0].components set from storage nw:tmp new_fur_co
 loot spawn ~ ~ ~ mine 0 -64 0 stone[minecraft:custom_data={drop_contents:1}]
 setblock 0 -64 0 bedrock
 
-$tellraw @s [{"text": "[","color": "white"},{"text": "NyaaWorks","color": "#22aaff"},{"text": "]","color": "white"},{"text": " 已获取家具 #","color": "yellow"},{"text":"$(nw_fur_id)","color": "white"}]
+$tellraw @s [{"text": "[","color": "white"},{"text": "NyaaWorks","color": "#22aaff"},{"text": "]","color": "white"},{"text": " 已获取家具 #","color": "yellow"},{"text":"$(id)","color": "white"}]
