@@ -1,0 +1,1 @@
+$scoreboard players set #calc_low nw $(low)

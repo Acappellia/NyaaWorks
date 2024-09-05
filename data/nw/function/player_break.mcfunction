@@ -10,7 +10,7 @@ execute if score #check_tool nw matches 1 run return -1
 ##identifying the nw_fur point
 #define score_holder #current_time
 execute store result score #current_time nw run time query gametime
-execute as @e[distance=..5,type=interaction,tag=nw_fur] store result score @s fur_interaction_time run data get entity @s attack.timestamp
+execute as @e[distance=..5,type=interaction,tag=nw_fur] run function nw:calc/get_atk_time
 execute as @e[distance=..5,type=interaction,tag=nw_fur] if score @s fur_interaction_time = #current_time nw run tag @s add interact_target
 
 ##determine if the point exists

@@ -7,6 +7,9 @@ forceload add 0 0 0 0
 scoreboard objectives add nw dummy
 scoreboard players set #10 nw 10
 scoreboard players set #2 nw 2
+scoreboard players set #214748 nw 214748
+scoreboard players set #-3648 nw -3648
+scoreboard players set #10000 nw 10000
 
 scoreboard objectives add nw_version dummy
 #define score_holder #nw_version
