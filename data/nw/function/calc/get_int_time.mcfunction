@@ -17,3 +17,5 @@ scoreboard players operation #calc_low nw -= #calc_high nw
 
 execute if score #calc_low nw matches ..-1 run function nw:calc/add_int32
 scoreboard players operation @s fur_interaction_time = #calc_low nw
+
+scoreboard players operation @s fur_interaction_time += #server_time_offset nc

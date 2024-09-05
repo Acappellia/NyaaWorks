@@ -4,6 +4,8 @@
 
 scoreboard objectives add nc dummy
 
+scoreboard players set #server_time_offset nc 0
+
 ##random number
 # Create scoreboard objective and initialise LCG
 scoreboard objectives add random dummy
