@@ -20,4 +20,4 @@ scoreboard players operation @s fur_interaction_time = #calc_low nw
 
 scoreboard players operation @s fur_interaction_time += #server_time_offset nc
 
-tellraw @p[distance=..5,gamemode=creative] [{"score": {"name": "#current_time","objective": "nw"}},"-",{"score": {"name": "@s","objective": "fur_interaction_time"}}]
+#tellraw @p[distance=..5,gamemode=creative] [{"score": {"name": "#current_time","objective": "nw"}},"-",{"score": {"name": "@s","objective": "fur_interaction_time"}}]
