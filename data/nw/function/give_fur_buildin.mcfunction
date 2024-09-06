@@ -21,11 +21,11 @@ $data modify storage nw:tmp new_fur_comp."minecraft:custom_data".nw_fur_id_build
 data modify storage nw:tmp new_fur_comp."minecraft:firework_explosion" set value {shape:"small_ball",colors:[I;16777215]}
 
 ##giveback item
-forceload add 0 0
-setblock 0 -64 0 bedrock
-setblock 0 -64 0 shulker_box{Items:[{Slot:0b,id:"minecraft:firework_star",count:1}]}
-data modify block 0 -64 0 Items[0].components set from storage nw:tmp new_fur_comp
-loot spawn ~ ~ ~ mine 0 -64 0 stone[minecraft:custom_data={drop_contents:1}]
-setblock 0 -64 0 bedrock
+forceload add 100 100
+setblock 1600 0 1600 bedrock
+setblock 1600 0 1600 shulker_box{Items:[{Slot:0b,id:"minecraft:firework_star",count:1}]}
+data modify block 1600 0 1600 Items[0].components set from storage nw:tmp new_fur_comp
+loot spawn ~ ~ ~ mine 1600 0 1600 stone[minecraft:custom_data={drop_contents:1}]
+setblock 1600 0 1600 bedrock
 
 $tellraw @s [{"text": "[","color": "white"},{"text": "NyaaWorks","color": "#22aaff"},{"text": "]","color": "white"},{"text": " 已获取内置家具 #","color": "yellow"},{"text":"$(id)","color": "white"}]

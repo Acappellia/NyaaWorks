@@ -4,8 +4,6 @@
 
 scoreboard objectives add nc dummy
 
-execute unless score #server_time_offset nc = #server_time_offset nc run scoreboard players set #server_time_offset nc 0
-
 ##random number
 # Create scoreboard objective and initialise LCG
 scoreboard objectives add random dummy
@@ -22,7 +20,7 @@ scoreboard objectives add p_id dummy
 execute unless score #player_id nc = #player_id nc run scoreboard players set #player_id nc -1
 
 ##force load
-forceload add 0 0 0 0
+forceload add 100 100
 
 ##tick
 schedule function nc:20gt_tick 20t replace

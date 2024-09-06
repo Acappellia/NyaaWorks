@@ -33,13 +33,13 @@ execute unless score #tool_dupe nw matches 1 run function nw:fur_sign/adddata
 item modify entity @s weapon.mainhand nw:remove_1
 
 ##giveback item
-forceload add 0 0
-setblock 0 -64 0 bedrock
-setblock 0 -64 0 shulker_box{Items:[{Slot:0b,id:"minecraft:wooden_hoe",count:1}]}
-data modify block 0 -64 0 Items[0].components set from storage nw:tmp mainhand.components
-execute unless score #tool_dupe nw matches 1 run item modify block 0 -64 0 container.0 nw:sign_name
-loot spawn ~ ~1 ~ mine 0 -64 0 stone[minecraft:custom_data={drop_contents:1}]
-setblock 0 -64 0 bedrock
+forceload add 100 100
+setblock 1600 0 1600 bedrock
+setblock 1600 0 1600 shulker_box{Items:[{Slot:0b,id:"minecraft:wooden_hoe",count:1}]}
+data modify block 1600 0 1600 Items[0].components set from storage nw:tmp mainhand.components
+execute unless score #tool_dupe nw matches 1 run item modify block 1600 0 1600 container.0 nw:sign_name
+loot spawn ~ ~1 ~ mine 1600 0 1600 stone[minecraft:custom_data={drop_contents:1}]
+setblock 1600 0 1600 bedrock
 
 ##effect
 particle wax_off ~ ~ ~ 1 1 1 0 20 normal

@@ -2,7 +2,7 @@
 #define storage nw:fur_data
 #define storage nw:fur_data_buildin
 
-forceload add 0 0 0 0
+forceload add 100 100
 
 scoreboard objectives add nw dummy
 scoreboard players set #10 nw 10

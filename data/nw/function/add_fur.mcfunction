@@ -221,9 +221,9 @@ execute if data storage nw:tmp add_fur.components."minecraft:custom_data".nw_fur
 execute unless data storage nw:tmp add_fur.components."minecraft:custom_data".nw_fur_id run function nw:fur_add/new_fur
 
 ##give generated item
-forceload add 0 0
-setblock 0 -64 0 bedrock
-setblock 0 -64 0 shulker_box{Items:[{Slot:0b,id:"minecraft:firework_star",count:1}]}
-data modify block 0 -64 0 Items[0].components set from storage nw:tmp new_fur_item
-loot give @s mine 0 -64 0 stone[minecraft:custom_data={drop_contents:1}]
-setblock 0 -64 0 bedrock
+forceload add 100 100
+setblock 1600 0 1600 bedrock
+setblock 1600 0 1600 shulker_box{Items:[{Slot:0b,id:"minecraft:firework_star",count:1}]}
+data modify block 1600 0 1600 Items[0].components set from storage nw:tmp new_fur_item
+loot give @s mine 1600 0 1600 stone[minecraft:custom_data={drop_contents:1}]
+setblock 1600 0 1600 bedrock
