@@ -21,7 +21,7 @@ $data modify storage nw:tmp new_fur_comp."minecraft:custom_data".nw_fur_id set v
 data modify storage nw:tmp new_fur_comp."minecraft:firework_explosion" set value {shape:"small_ball",colors:[I;16777215]}
 
 ##giveback item
-forceload add 100 100
+forceload add 1600 1600
 setblock 1600 0 1600 bedrock
 setblock 1600 0 1600 shulker_box{Items:[{Slot:0b,id:"minecraft:firework_star",count:1}]}
 data modify block 1600 0 1600 Items[0].components set from storage nw:tmp new_fur_comp

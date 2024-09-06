@@ -20,7 +20,7 @@ scoreboard objectives add p_id dummy
 execute unless score #player_id nc = #player_id nc run scoreboard players set #player_id nc -1
 
 ##force load
-forceload add 100 100
+forceload add 1600 1600
 
 ##tick
 schedule function nc:20gt_tick 20t replace
