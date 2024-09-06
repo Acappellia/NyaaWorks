@@ -34,6 +34,7 @@ scoreboard players reset #dyed_color nw
 execute store result score #dyed_color nw run data get storage nw:tmp fur_info.nw_fur_color.colors[0]
 
 ##giveback item
+forceload add 0 0
 setblock 0 -64 0 bedrock
 setblock 0 -64 0 shulker_box{Items:[{Slot:0b,id:"minecraft:firework_star",count:1}]}
 data modify block 0 -64 0 Items[0].components set from storage nw:tmp new_fur_comp

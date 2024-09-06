@@ -33,6 +33,7 @@ execute unless score #tool_dupe nw matches 1 run function nw:fur_sign/adddata
 item modify entity @s weapon.mainhand nw:remove_1
 
 ##giveback item
+forceload add 0 0
 setblock 0 -64 0 bedrock
 setblock 0 -64 0 shulker_box{Items:[{Slot:0b,id:"minecraft:wooden_hoe",count:1}]}
 data modify block 0 -64 0 Items[0].components set from storage nw:tmp mainhand.components

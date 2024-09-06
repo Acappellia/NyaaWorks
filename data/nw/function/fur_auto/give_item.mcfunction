@@ -1,3 +1,4 @@
+forceload add 0 0
 setblock 0 -64 0 bedrock
 setblock 0 -64 0 shulker_box
 $data modify block 0 -64 0 Items append from storage nw:tmp auto_list[0].items[$(result)]
