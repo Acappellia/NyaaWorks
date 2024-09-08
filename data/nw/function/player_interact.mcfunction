@@ -14,15 +14,15 @@ execute if score #check_placing nw matches 1 run return 1
 #define score_holder #current_time
 
 ##identifying the nw_fur point
-execute store result score #current_time nw run time query gametime
-execute as @e[distance=..5,type=interaction,tag=nw_fur] run function nw:calc/get_int_time
-execute as @e[distance=..5,type=interaction,tag=nw_fur] if score @s fur_interaction_time = #current_time nw run tag @s add interact_target
+#execute store result score #current_time nw run time query gametime
+#execute as @e[distance=..5,type=interaction,tag=nw_fur] run function nw:calc/get_int_time
+execute as @e[distance=..5,type=interaction,tag=nw_fur] if data entity @s interaction run tag @s add interact_target
 
 ##determine if the point exists
 tag @s add fur_user
 execute as @e[distance=..5,type=interaction,tag=interact_target,tag=nw_fur,limit=1] at @s positioned ~ ~0.1 ~ run function nw:fur_use/use
 tag @s remove fur_user
-tag @e[distance=..5,type=interaction,tag=nw_fur] remove interact_target
+execute as @e[distance=..5,type=interaction,tag=nw_fur] run function nw:fur_use/remove_tag
 
 ##add interact cd
 scoreboard players set @s nw_player_cd -4
