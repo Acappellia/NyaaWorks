@@ -1,0 +1,16 @@
+$execute if items entity @s weapon.mainhand red_concrete_powder run summon item ~ ~1 ~ {Motion:[0.0,0.2,0.0],Item:{id:"red_concrete",count:$(count)}}
+$execute if items entity @s weapon.mainhand blue_concrete_powder run summon item ~ ~1 ~ {Motion:[0.0,0.2,0.0],Item:{id:"blue_concrete",count:$(count)}}
+$execute if items entity @s weapon.mainhand gray_concrete_powder run summon item ~ ~1 ~ {Motion:[0.0,0.2,0.0],Item:{id:"gray_concrete",count:$(count)}}
+$execute if items entity @s weapon.mainhand lime_concrete_powder run summon item ~ ~1 ~ {Motion:[0.0,0.2,0.0],Item:{id:"lime_concrete",count:$(count)}}
+$execute if items entity @s weapon.mainhand pink_concrete_powder run summon item ~ ~1 ~ {Motion:[0.0,0.2,0.0],Item:{id:"pink_concrete",count:$(count)}}
+$execute if items entity @s weapon.mainhand cyan_concrete_powder run summon item ~ ~1 ~ {Motion:[0.0,0.2,0.0],Item:{id:"cyan_concrete",count:$(count)}}
+$execute if items entity @s weapon.mainhand black_concrete_powder run summon item ~ ~1 ~ {Motion:[0.0,0.2,0.0],Item:{id:"black_concrete",count:$(count)}}
+$execute if items entity @s weapon.mainhand brown_concrete_powder run summon item ~ ~1 ~ {Motion:[0.0,0.2,0.0],Item:{id:"brown_concrete",count:$(count)}}
+$execute if items entity @s weapon.mainhand green_concrete_powder run summon item ~ ~1 ~ {Motion:[0.0,0.2,0.0],Item:{id:"green_concrete",count:$(count)}}
+$execute if items entity @s weapon.mainhand white_concrete_powder run summon item ~ ~1 ~ {Motion:[0.0,0.2,0.0],Item:{id:"white_concrete",count:$(count)}}
+$execute if items entity @s weapon.mainhand orange_concrete_powder run summon item ~ ~1 ~ {Motion:[0.0,0.2,0.0],Item:{id:"orange_concrete",count:$(count)}}
+$execute if items entity @s weapon.mainhand purple_concrete_powder run summon item ~ ~1 ~ {Motion:[0.0,0.2,0.0],Item:{id:"purple_concrete",count:$(count)}}
+$execute if items entity @s weapon.mainhand yellow_concrete_powder run summon item ~ ~1 ~ {Motion:[0.0,0.2,0.0],Item:{id:"yellow_concrete",count:$(count)}}
+$execute if items entity @s weapon.mainhand magenta_concrete_powder run summon item ~ ~1 ~ {Motion:[0.0,0.2,0.0],Item:{id:"magenta_concrete",count:$(count)}}
+$execute if items entity @s weapon.mainhand light_blue_concrete_powder run summon item ~ ~1 ~ {Motion:[0.0,0.2,0.0],Item:{id:"light_blue_concrete",count:$(count)}}
+$execute if items entity @s weapon.mainhand light_gray_concrete_powder run summon item ~ ~1 ~ {Motion:[0.0,0.2,0.0],Item:{id:"light_gray_concrete",count:$(count)}}

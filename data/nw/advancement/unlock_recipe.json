@@ -6,22 +6,6 @@
     },
     "rewards": {
         "recipes": [
-            "nw:brush_1",
-            "nw:brush_2",
-            "nw:brush_3",
-            "nw:brush_4",
-            "nw:brush_5",
-            "nw:brush_6",
-            "nw:brush_7",
-            "nw:brush_8",
-            "nw:brush_9",
-            "nw:brush_10",
-            "nw:brush_11",
-            "nw:brush_12",
-            "nw:brush_13",
-            "nw:brush_14",
-            "nw:brush_15",
-            "nw:brush_16",
             "nw:furniture_0",
             "nw:furniture_1",
             "nw:furniture_2",
@@ -655,7 +639,15 @@
             "nw:furniture_961",
             "nw:furniture_962",
             "nw:furniture_963",
-            "nw:furniture_964"
+            "nw:furniture_964",
+            "nw:furniture_968",
+            "nw:furniture_971",
+            "nw:furniture_982",
+            "nw:furniture_983",
+            "nw:furniture_989",
+            "nw:furniture_1031",
+            "nw:furniture_1032",
+            "nw:furniture_1033"
         ]
     }
 }
