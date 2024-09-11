@@ -17,6 +17,7 @@ execute if score #effect_type nw matches 12 positioned ~ ~0.4 ~ run function nw:
 execute if score #effect_type nw matches 13 positioned ~ ~0.9 ~ run function nw:fur_use/sit_full
 execute if score #effect_type nw matches 14 as @n[type=item_display,tag=nw_display,distance=..0.5] run function nw:fur_use/rotate_c
 execute if score #effect_type nw matches 15 as @n[type=item_display,tag=nw_display,distance=..0.5] run function nw:fur_use/rotate_cc
+execute if score #effect_type nw matches 17 as @n[type=item_display,tag=nw_display,distance=..0.5] run function nw:fur_use/shake
 
 ##loop
 data remove storage nw:tmp interaction_list[0]

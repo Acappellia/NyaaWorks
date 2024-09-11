@@ -11,6 +11,7 @@ execute if score #effect_type nw matches 8 run function nw:fur_use/command with 
 execute if score #effect_type nw matches 11 run function nw:fur_auto/switch
 execute if score #effect_type nw matches 14 as @n[type=item_display,tag=nw_display,distance=..0.5] run function nw:fur_auto/rotate_c
 execute if score #effect_type nw matches 15 as @n[type=item_display,tag=nw_display,distance=..0.5] run function nw:fur_auto/rotate_cc
+execute if score #effect_type nw matches 17 as @n[type=item_display,tag=nw_display,distance=..0.5] run function nw:fur_use/shake
 
 ##loop
 data remove storage nw:tmp auto_list[0]
