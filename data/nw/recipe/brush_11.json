@@ -17,7 +17,7 @@
     "count": 1,
     "id": "minecraft:firework_star",
     "components": {
-      "minecraft:item_name": "青色颜料刷",
+      "minecraft:item_name": "\"青色颜料刷\"",
       "minecraft:lore": [
         "[{\"text\":\"能够自由的为所有家具染色！\",\"color\":\"gray\",\"italic\":false}]",
         "[{\"text\":\"右键已放置的家具或在\",\"color\":\"gray\",\"italic\":false},{\"text\":\" 家具染色台 \",\"color\":\"white\",\"italic\":false},{\"text\":\"上使用\",\"color\":\"gray\",\"italic\":false}]"
