@@ -1,10 +1,7 @@
 execute if score @s nw_player_cd matches ..-1 run return -1
 
-##check tool
-execute if data storage nw:tmp mainhand.components."minecraft:custom_data".nw_tool run return run function nw:fur_edit/check_tool
-
 ##check sneak
-execute if predicate nw:is_sneaking if entity @s[gamemode=!adventure] run return run function nw:block_place/check_hand
+execute if predicate nw:is_sneaking unless predicate nw:is_holding_tool if entity @s[gamemode=!adventure] run return run function nw:block_place/check_hand
 
 ##determine if the point exists
 tag @s add fur_user
