@@ -1,0 +1,6 @@
+give @s stick[item_name='"重置家具"',custom_data={nw_reset:1}]
+give @s stick[item_name='"修改大小"',custom_data={nw_scale:1}]
+give @s stick[item_name='"上下移动"',custom_data={nw_move_up:1}]
+give @s stick[item_name='"前后移动"',custom_data={nw_move_forward:1}]
+give @s stick[item_name='"左右移动"',custom_data={nw_move_left:1}]
+give @s stick[item_name='"纵向旋转"',custom_data={nw_rotate_yaw:1}]
