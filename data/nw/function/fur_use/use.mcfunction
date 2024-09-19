@@ -11,13 +11,11 @@ execute if score #transfer_success nw matches 1 run return 4
 ##check hand 
 data remove storage nw:tmp mainhand
 data modify storage nw:tmp mainhand set from entity @p[distance=..6,tag=fur_user] SelectedItem
-execute if data storage nw:tmp mainhand.components."minecraft:custom_data".nw_dye run function nw:fur_dye/dye_placed
-execute if data storage nw:tmp mainhand.components."minecraft:custom_data".nw_tool run function nw:fur_edit/check_tool
-execute if data storage nw:tmp mainhand.components."minecraft:custom_data".nw_tool run return 2
-execute if data storage nw:tmp mainhand.components."minecraft:custom_data".nw_dye run return 2
+execute if data storage nw:tmp mainhand.components."minecraft:custom_data".nw_dye run return run function nw:fur_dye/dye_placed
+execute if data storage nw:tmp mainhand.components."minecraft:custom_data".nw_tool run return run function nw:fur_edit/check_tool
 
 ##check tag
-execute unless entity @s[tag=nw_action] as @p[distance=..6,tag=fur_user] at @s run function nw:block_place/check_hand
+execute unless entity @s[tag=nw_action] as @p[distance=..6,tag=fur_user,gamemode=!adventure] at @s run function nw:block_place/check_hand
 execute unless entity @s[tag=nw_action] run return 3
 
 ##check cooldown
