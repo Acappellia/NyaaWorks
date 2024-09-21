@@ -24,4 +24,4 @@ forceload add 1600 1600
 
 ##tick
 schedule function nc:20gt_tick 20t replace
-schedule function nc:backup_tick 72d append
+execute unless score #disable_noti nw matches 1.. run schedule function nc:backup_tick 72d append
