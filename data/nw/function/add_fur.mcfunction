@@ -103,112 +103,112 @@ data modify storage nw:tmp new_fur_display_components."minecraft:custom_data".st
 data remove storage nw:tmp interation_item
 data remove storage nw:tmp interation_to_add
 data modify storage nw:tmp interation_item set from storage nw:tmp add_fur.components."minecraft:container"[{slot:2}].item
-execute if data storage nw:tmp interation_item run function nw:fur_add_interaction
+execute if data storage nw:tmp interation_item run function nw:fur_add/fur_add_interaction
 data modify storage nw:tmp new_fur_display_components."minecraft:custom_data".state_a.interaction append from storage nw:tmp interation_to_add
 
 data remove storage nw:tmp interation_item
 data remove storage nw:tmp interation_to_add
 data modify storage nw:tmp interation_item set from storage nw:tmp add_fur.components."minecraft:container"[{slot:11}].item
-execute if data storage nw:tmp interation_item run function nw:fur_add_interaction
+execute if data storage nw:tmp interation_item run function nw:fur_add/fur_add_interaction
 data modify storage nw:tmp new_fur_display_components."minecraft:custom_data".state_a.interaction append from storage nw:tmp interation_to_add
 
 data remove storage nw:tmp interation_item
 data remove storage nw:tmp interation_to_add
 data modify storage nw:tmp interation_item set from storage nw:tmp add_fur.components."minecraft:container"[{slot:20}].item
-execute if data storage nw:tmp interation_item run function nw:fur_add_interaction
+execute if data storage nw:tmp interation_item run function nw:fur_add/fur_add_interaction
 data modify storage nw:tmp new_fur_display_components."minecraft:custom_data".state_a.interaction append from storage nw:tmp interation_to_add
 
 data remove storage nw:tmp interation_item
 data remove storage nw:tmp interation_to_add
 data modify storage nw:tmp interation_item set from storage nw:tmp add_fur.components."minecraft:container"[{slot:3}].item
-execute if data storage nw:tmp interation_item run function nw:fur_add_interaction
+execute if data storage nw:tmp interation_item run function nw:fur_add/fur_add_interaction
 data modify storage nw:tmp new_fur_display_components."minecraft:custom_data".state_a.interaction append from storage nw:tmp interation_to_add
 
 data remove storage nw:tmp interation_item
 data remove storage nw:tmp interation_to_add
 data modify storage nw:tmp interation_item set from storage nw:tmp add_fur.components."minecraft:container"[{slot:12}].item
-execute if data storage nw:tmp interation_item run function nw:fur_add_interaction
+execute if data storage nw:tmp interation_item run function nw:fur_add/fur_add_interaction
 data modify storage nw:tmp new_fur_display_components."minecraft:custom_data".state_a.interaction append from storage nw:tmp interation_to_add
 
 data remove storage nw:tmp interation_item
 data remove storage nw:tmp interation_to_add
 data modify storage nw:tmp interation_item set from storage nw:tmp add_fur.components."minecraft:container"[{slot:21}].item
-execute if data storage nw:tmp interation_item run function nw:fur_add_interaction
+execute if data storage nw:tmp interation_item run function nw:fur_add/fur_add_interaction
 data modify storage nw:tmp new_fur_display_components."minecraft:custom_data".state_a.interaction append from storage nw:tmp interation_to_add
 
 ##slot 6,15,24,7,16,25 state B interaction
 data remove storage nw:tmp interation_item
 data remove storage nw:tmp interation_to_add
 data modify storage nw:tmp interation_item set from storage nw:tmp add_fur.components."minecraft:container"[{slot:6}].item
-execute if data storage nw:tmp interation_item run function nw:fur_add_interaction
+execute if data storage nw:tmp interation_item run function nw:fur_add/fur_add_interaction
 data modify storage nw:tmp new_fur_display_components."minecraft:custom_data".state_b.interaction append from storage nw:tmp interation_to_add
 
 data remove storage nw:tmp interation_item
 data remove storage nw:tmp interation_to_add
 data modify storage nw:tmp interation_item set from storage nw:tmp add_fur.components."minecraft:container"[{slot:15}].item
-execute if data storage nw:tmp interation_item run function nw:fur_add_interaction
+execute if data storage nw:tmp interation_item run function nw:fur_add/fur_add_interaction
 data modify storage nw:tmp new_fur_display_components."minecraft:custom_data".state_b.interaction append from storage nw:tmp interation_to_add
 
 data remove storage nw:tmp interation_item
 data remove storage nw:tmp interation_to_add
 data modify storage nw:tmp interation_item set from storage nw:tmp add_fur.components."minecraft:container"[{slot:24}].item
-execute if data storage nw:tmp interation_item run function nw:fur_add_interaction
+execute if data storage nw:tmp interation_item run function nw:fur_add/fur_add_interaction
 data modify storage nw:tmp new_fur_display_components."minecraft:custom_data".state_b.interaction append from storage nw:tmp interation_to_add
 
 data remove storage nw:tmp interation_item
 data remove storage nw:tmp interation_to_add
 data modify storage nw:tmp interation_item set from storage nw:tmp add_fur.components."minecraft:container"[{slot:7}].item
-execute if data storage nw:tmp interation_item run function nw:fur_add_interaction
+execute if data storage nw:tmp interation_item run function nw:fur_add/fur_add_interaction
 data modify storage nw:tmp new_fur_display_components."minecraft:custom_data".state_b.interaction append from storage nw:tmp interation_to_add
 
 data remove storage nw:tmp interation_item
 data remove storage nw:tmp interation_to_add
 data modify storage nw:tmp interation_item set from storage nw:tmp add_fur.components."minecraft:container"[{slot:16}].item
-execute if data storage nw:tmp interation_item run function nw:fur_add_interaction
+execute if data storage nw:tmp interation_item run function nw:fur_add/fur_add_interaction
 data modify storage nw:tmp new_fur_display_components."minecraft:custom_data".state_b.interaction append from storage nw:tmp interation_to_add
 
 data remove storage nw:tmp interation_item
 data remove storage nw:tmp interation_to_add
 data modify storage nw:tmp interation_item set from storage nw:tmp add_fur.components."minecraft:container"[{slot:25}].item
-execute if data storage nw:tmp interation_item run function nw:fur_add_interaction
+execute if data storage nw:tmp interation_item run function nw:fur_add/fur_add_interaction
 data modify storage nw:tmp new_fur_display_components."minecraft:custom_data".state_b.interaction append from storage nw:tmp interation_to_add
 
 ##slot 4,13,22 state A auto
 data remove storage nw:tmp interation_item
 data remove storage nw:tmp interation_to_add
 data modify storage nw:tmp interation_item set from storage nw:tmp add_fur.components."minecraft:container"[{slot:4}].item
-execute if data storage nw:tmp interation_item run function nw:fur_add_interaction
+execute if data storage nw:tmp interation_item run function nw:fur_add/fur_add_interaction
 data modify storage nw:tmp new_fur_display_components."minecraft:custom_data".state_a.auto append from storage nw:tmp interation_to_add
 
 data remove storage nw:tmp interation_item
 data remove storage nw:tmp interation_to_add
 data modify storage nw:tmp interation_item set from storage nw:tmp add_fur.components."minecraft:container"[{slot:13}].item
-execute if data storage nw:tmp interation_item run function nw:fur_add_interaction
+execute if data storage nw:tmp interation_item run function nw:fur_add/fur_add_interaction
 data modify storage nw:tmp new_fur_display_components."minecraft:custom_data".state_a.auto append from storage nw:tmp interation_to_add
 
 data remove storage nw:tmp interation_item
 data remove storage nw:tmp interation_to_add
 data modify storage nw:tmp interation_item set from storage nw:tmp add_fur.components."minecraft:container"[{slot:22}].item
-execute if data storage nw:tmp interation_item run function nw:fur_add_interaction
+execute if data storage nw:tmp interation_item run function nw:fur_add/fur_add_interaction
 data modify storage nw:tmp new_fur_display_components."minecraft:custom_data".state_a.auto append from storage nw:tmp interation_to_add
 
 ##slot 8,17,26 state B auto
 data remove storage nw:tmp interation_item
 data remove storage nw:tmp interation_to_add
 data modify storage nw:tmp interation_item set from storage nw:tmp add_fur.components."minecraft:container"[{slot:8}].item
-execute if data storage nw:tmp interation_item run function nw:fur_add_interaction
+execute if data storage nw:tmp interation_item run function nw:fur_add/fur_add_interaction
 data modify storage nw:tmp new_fur_display_components."minecraft:custom_data".state_b.auto append from storage nw:tmp interation_to_add
 
 data remove storage nw:tmp interation_item
 data remove storage nw:tmp interation_to_add
 data modify storage nw:tmp interation_item set from storage nw:tmp add_fur.components."minecraft:container"[{slot:17}].item
-execute if data storage nw:tmp interation_item run function nw:fur_add_interaction
+execute if data storage nw:tmp interation_item run function nw:fur_add/fur_add_interaction
 data modify storage nw:tmp new_fur_display_components."minecraft:custom_data".state_b.auto append from storage nw:tmp interation_to_add
 
 data remove storage nw:tmp interation_item
 data remove storage nw:tmp interation_to_add
 data modify storage nw:tmp interation_item set from storage nw:tmp add_fur.components."minecraft:container"[{slot:26}].item
-execute if data storage nw:tmp interation_item run function nw:fur_add_interaction
+execute if data storage nw:tmp interation_item run function nw:fur_add/fur_add_interaction
 data modify storage nw:tmp new_fur_display_components."minecraft:custom_data".state_b.auto append from storage nw:tmp interation_to_add
 
 ##check has auto

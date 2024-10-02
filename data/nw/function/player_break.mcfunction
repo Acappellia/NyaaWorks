@@ -6,6 +6,6 @@ advancement revoke @s only nw:break
 #execute as @e[distance=..5,type=interaction,tag=nw_fur] run function nw:calc/get_atk_time
 execute as @e[distance=..5,type=interaction,tag=nw_fur] if data entity @s attack run tag @s add interact_target
 
-function nw:player_break_2
+function nw:fur_remove/player_break_2
 
 execute as @e[distance=..5,type=interaction,tag=nw_fur] run function nw:fur_remove/remove_tag

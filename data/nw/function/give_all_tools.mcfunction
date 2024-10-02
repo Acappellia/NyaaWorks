@@ -1,0 +1,6 @@
+give @s stick[item_name='"[NyaaWorks] 重置家具"',custom_data={nw_tool:1,nw_reset:1},enchantment_glint_override=true]
+give @s stick[item_name='"[NyaaWorks] 修改大小"',custom_data={nw_tool:1,nw_scale:1},enchantment_glint_override=true]
+give @s stick[item_name='"[NyaaWorks] 上下移动"',custom_data={nw_tool:1,nw_move_up:1},enchantment_glint_override=true]
+give @s stick[item_name='"[NyaaWorks] 前后移动"',custom_data={nw_tool:1,nw_move_forward:1},enchantment_glint_override=true]
+give @s stick[item_name='"[NyaaWorks] 左右移动"',custom_data={nw_tool:1,nw_move_left:1},enchantment_glint_override=true]
+give @s stick[item_name='"[NyaaWorks] 纵向旋转"',custom_data={nw_tool:1,nw_rotate_yaw:1},enchantment_glint_override=true]
