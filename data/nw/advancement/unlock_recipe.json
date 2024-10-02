@@ -6,6 +6,7 @@
     },
     "rewards": {
         "recipes": [
+            "nwr:guide_book",
             "nw:furniture_0",
             "nw:furniture_1_cut",
             "nw:furniture_2_cut",
@@ -751,7 +752,8 @@
             "nwr:furniture_1099_cut",
             "nwr:furniture_1100_cut",
             "nw:furniture_1101",
-            "nwr:furniture_1102_cut"
+            "nwr:furniture_1102_cut",
+            "nwr:furniture_1103_cut"
         ]
     }
 }
