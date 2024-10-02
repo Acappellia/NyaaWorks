@@ -6,7 +6,7 @@ forceload add 1600 1600
 
 scoreboard objectives add nw dummy
 scoreboard players set #10 nw 10
-scoreboard players set #15 nw 15
+scoreboard players set #12 nw 12
 scoreboard players set #2 nw 2
 scoreboard players set #214748 nw 214748
 scoreboard players set #-3648 nw -3648
