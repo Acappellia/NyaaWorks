@@ -1,7 +1,5 @@
 ##check tool
-scoreboard players set #check_tool nw 0
-execute as @p[distance=..10,tag=fur_user] run function nw:fur_remove/check_hand
-execute if score #check_tool nw matches 1 run return -1
+execute as @p[distance=..10,tag=fur_user] unless items entity @s weapon.mainhand #hoes run return -1
 
 ##check player
 #define score_holder #transfer_check
