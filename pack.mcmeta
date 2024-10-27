@@ -1,6 +1,10 @@
 {
     "pack": {
         "pack_format": 48,
+        "supported_formats":[
+            48,
+            57
+        ],
         "description": [
             {
                 "text": "【 NyaaWorks | 喵工坊 】",
@@ -13,6 +17,14 @@
             {
                 "text": "r2.0-1.21/1.21.1",
                 "color": "gray"
+            }
+        ]
+    },
+    "overlays": {
+        "entries": [
+            {
+                "formats": 57,
+                "directory": "overlay_1_21_3"
             }
         ]
     }
