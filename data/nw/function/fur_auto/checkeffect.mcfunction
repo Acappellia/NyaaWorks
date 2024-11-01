@@ -15,4 +15,4 @@ execute if score #effect_type nw matches 17 as @n[type=item_display,tag=nw_displ
 
 ##loop
 data remove storage nw:tmp auto_list[0]
-execute if data storage nw:tmp auto_list[0] run function nw:fur_auto/checkeffect
+execute unless score #effect_return nw matches 1.. if data storage nw:tmp auto_list[0] run function nw:fur_auto/checkeffect

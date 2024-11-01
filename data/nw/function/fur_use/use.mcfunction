@@ -35,5 +35,8 @@ data remove storage nw:tmp fur_info
 execute if score @s fur_id = @s fur_id run function nw:fur_use/copydata
 execute if score @s fur_id_buildin = @s fur_id_buildin run function nw:fur_use/copydata_buildin
 
+#define score_holder #effect_return
+scoreboard players reset #effect_return nw
+
 ##execute
 execute if data storage nw:tmp interaction_list[0] as @p[distance=..6,tag=fur_user] run function nw:fur_use/checkeffect
