@@ -1,5 +1,10 @@
+##check creative
 execute if entity @p[distance=..10,tag=fur_user,gamemode=creative] run return 2
 
+##if bypass permission
+execute unless score #player_permission nw matches 1 run return 2
+
+##check owner
 execute if score @s p_id = @p[distance=..10,tag=fur_user] p_id run return 2
 
 ##check friends

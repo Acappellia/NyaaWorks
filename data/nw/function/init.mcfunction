@@ -15,7 +15,7 @@ scoreboard players set #10000 nw 10000
 scoreboard objectives add nw_version dummy
 #define score_holder #nw_version
 #define score_holder #current_version
-scoreboard players set #current_version nw_version 20003
+scoreboard players set #current_version nw_version 20004
 execute unless score #nw_version nw_version = #current_version nw_version run function nw:init_buildin_data
 scoreboard players operation #nw_version nw_version = #current_version nw_version
 
@@ -24,6 +24,12 @@ execute unless score #fur_id nw matches -2147483648..2147483647 run scoreboard p
 
 #define score_holder #allow_unsafe_placement
 execute unless score #allow_unsafe_placement nw matches 0..1 run scoreboard players set #allow_unsafe_placement nw 1
+
+#define score_holder #disable_noti
+execute unless score #disable_noti nw matches 0..1 run scoreboard players set #disable_noti nw 0
+
+#define score_holder #player_permission
+execute unless score #player_permission nw matches 0..1 run scoreboard players set #player_permission nw 1
 
 scoreboard objectives add fur_transfer_target dummy
 scoreboard objectives add fur_transfer_target_buildin dummy

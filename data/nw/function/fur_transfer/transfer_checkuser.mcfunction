@@ -1,14 +1,14 @@
 ##bypass creative
-execute if entity @p[distance=..10,tag=fur_user,gamemode=creative] run scoreboard players set #transfer_check nw 1
-execute if entity @p[distance=..10,tag=fur_user,gamemode=creative] run return 1
+execute if entity @p[distance=..10,tag=fur_user,gamemode=creative] run return run scoreboard players set #transfer_check nw 1
 
 ##check unbreakable
-execute if entity @s[tag=nw_admin] run tellraw @p[distance=..10,tag=fur_user] [{"text": "[","color": "white"},{"text": "NyaaWorks","color": "#22aaff"},{"text": "]","color": "white"},{"text": " 此家具仅可由管理员更改","color": "gray"}]
-execute if entity @s[tag=nw_admin] run return -1
+execute if entity @s[tag=nw_admin] run return run execute unless score #disable_noti nw matches 1.. run tellraw @p[distance=..10,tag=fur_user] [{"text": "[","color": "white"},{"text": "NyaaWorks","color": "#22aaff"},{"text": "]","color": "white"},{"text": " 此家具仅可由管理员更改","color": "gray"}]
+
+##if bypass permission
+execute unless score #player_permission nw matches 1 run return run scoreboard players set #transfer_check nw 1
 
 ##check player id
-execute if score @s p_id = @p[distance=..10,tag=fur_user] p_id run scoreboard players set #transfer_check nw 1
-execute if score @s p_id = @p[distance=..10,tag=fur_user] p_id run return 1
+execute if score @s p_id = @p[distance=..10,tag=fur_user] p_id run return run scoreboard players set #transfer_check nw 1
 
 ##check friends
 #define score_holder #friends_success
@@ -17,8 +17,7 @@ execute store result storage nw:tmp p_info.target_id int 1 run scoreboard player
 execute store result storage nw:tmp p_info.self_id int 1 run scoreboard players get @p[distance=..10,tag=fur_user] p_id
 scoreboard players reset #friends_success nw
 execute store result score #friends_success nw run function nw:fur_remove/check_friends with storage nw:tmp p_info
-execute if score #friends_success nw matches 2 run scoreboard players set #transfer_check nw 1
-execute if score #friends_success nw matches 2 run return 1
+execute if score #friends_success nw matches 2 run return run scoreboard players set #transfer_check nw 1
 
 ##check tool id
 #define score_holder #tool_success

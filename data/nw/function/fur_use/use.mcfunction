@@ -21,8 +21,7 @@ execute unless entity @s[tag=nw_action] run return 3
 ##check cooldown
 #define score_holder #interaction_cd
 scoreboard players operation #interaction_cd nw = @s fur_interaction_cd
-execute if score #interaction_cd nw matches 1.. run tellraw @p[distance=..6,tag=fur_user] [{"text": "[","color": "white"},{"text": "NyaaWorks","color": "#22aaff"},{"text": "]","color": "white"},{"text": " 冷却中，剩余 ","color": "gray"},{"score":{"name": "#interaction_cd","objective": "nw"}},{"text": " 秒","color": "gray"}]
-execute if score #interaction_cd nw matches 1.. run return -1
+execute if score #interaction_cd nw matches 1.. run return run execute unless score #disable_noti nw matches 1.. run tellraw @p[distance=..6,tag=fur_user] [{"text": "[","color": "white"},{"text": "NyaaWorks","color": "#22aaff"},{"text": "]","color": "white"},{"text": " 冷却中，剩余 ","color": "gray"},{"score":{"name": "#interaction_cd","objective": "nw"}},{"text": " 秒","color": "gray"}]
 
 ##reset cd
 scoreboard players set @s fur_interaction_cd 0

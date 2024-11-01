@@ -1,14 +1,17 @@
 ##bypass creative
-execute if entity @p[distance=..10,tag=fur_destroyer,gamemode=creative] run function nw:fur_remove/remove_checktype
-execute if entity @p[distance=..10,tag=fur_destroyer,gamemode=creative] run return 1
+execute if entity @p[distance=..10,tag=fur_destroyer,gamemode=creative] run return run function nw:fur_remove/remove_checktype
 
 ##check unbreakable
-execute if entity @s[tag=nw_admin] run tellraw @p[distance=..10,tag=fur_destroyer] [{"text": "[","color": "white"},{"text": "NyaaWorks","color": "#22aaff"},{"text": "]","color": "white"},{"text": " 此家具仅可由管理员取下","color": "gray"}]
-execute if entity @s[tag=nw_admin] run return -1
+execute if entity @s[tag=nw_admin] run return run execute unless score #disable_noti nw matches 1.. run tellraw @p[distance=..10,tag=fur_destroyer] [{"text": "[","color": "white"},{"text": "NyaaWorks","color": "#22aaff"},{"text": "]","color": "white"},{"text": " 此家具仅可由管理员取下","color": "gray"}]
+
+##if bypass permission
+execute unless score #player_permission nw matches 1 run return run function nw:fur_remove/remove_checktype
+
+##check valid pid
+execute unless score @s p_id = @s p_id run return run function nw:fur_remove/remove_checktype
 
 ##check player id
-execute if score @s p_id = @p[distance=..10,tag=fur_destroyer] p_id run function nw:fur_remove/remove_checktype
-execute unless score @s p_id = @s p_id run return 1
+execute if score @s p_id = @p[distance=..10,tag=fur_destroyer] p_id run return run function nw:fur_remove/remove_checktype
 
 ##check friends
 #define score_holder #friends_success
@@ -17,8 +20,7 @@ execute store result storage nw:tmp p_info.target_id int 1 run scoreboard player
 execute store result storage nw:tmp p_info.self_id int 1 run scoreboard players get @p[distance=..10,tag=fur_destroyer] p_id
 scoreboard players reset #friends_success nw
 execute store result score #friends_success nw run function nw:fur_remove/check_friends with storage nw:tmp p_info
-execute if score #friends_success nw matches 2 run function nw:fur_remove/remove_checktype
-execute if score #friends_success nw matches 2 run return 1
+execute if score #friends_success nw matches 2 run return run function nw:fur_remove/remove_checktype
 
 ##check tool id
 #define score_holder #tool_success

@@ -2,8 +2,7 @@
 scoreboard players operation #friend_id nw = @p[distance=..10,tag=fur_user] p_id
 
 ##check if self
-execute if score @s p_id = #friend_id nw run tellraw @p[distance=..10,tag=fur_user] [{"text": "[","color": "white"},{"text": "NyaaWorks","color": "#22aaff"},{"text": "] ","color": "white"},{"text": "无法与自己添加好友。如需添加好友请拆除家具后重新摆放。","color": "gray"}]
-execute if score @s p_id = #friend_id nw run return -1
+execute if score @s p_id = #friend_id nw run return run execute unless score #disable_noti nw matches 1.. run tellraw @p[distance=..10,tag=fur_user] [{"text": "[","color": "white"},{"text": "NyaaWorks","color": "#22aaff"},{"text": "] ","color": "white"},{"text": "无法与自己添加好友。如需添加好友请拆除家具后重新摆放。","color": "gray"}]
 
 ##add friends
 tag @s add nw_friend_slate

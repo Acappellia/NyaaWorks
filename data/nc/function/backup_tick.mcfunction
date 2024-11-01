@@ -33,6 +33,6 @@ execute if score #backup_no nc matches 14 run function nc:backups/backup_14
 scoreboard players add #backup_no nc 1
 execute if score #backup_no nc matches 15.. run scoreboard players set #backup_no nc 1
 
-tellraw @a[gamemode=creative] [{"text": "[","color": "white"},{"text": "NyaaCore","color": "yellow"},{"text": "] ","color": "white"},{"text": " 玩家数据已备份","color": "gray"}]
+execute unless score #disable_noti nw matches 1.. run tellraw @a[gamemode=creative] [{"text": "[","color": "white"},{"text": "NyaaCore","color": "yellow"},{"text": "] ","color": "white"},{"text": " 玩家数据已备份","color": "gray"}]
 
 schedule function nc:backup_tick 72d replace
