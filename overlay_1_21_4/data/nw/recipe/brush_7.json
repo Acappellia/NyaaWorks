@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "show_notification": true,
+  "ingredients": [
+    "brush",
+    "orange_dye",
+    "honey_bottle"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:firework_star",
+    "components": {
+      "minecraft:item_name": "\"橙色颜料刷\"",
+      "minecraft:lore": [
+        "[{\"text\":\"能够自由的为所有家具染色！\",\"color\":\"gray\",\"italic\":false}]",
+        "[{\"text\":\"右键已放置的家具或在\",\"color\":\"gray\",\"italic\":false},{\"text\":\" 家具染色台 \",\"color\":\"white\",\"italic\":false},{\"text\":\"上使用\",\"color\":\"gray\",\"italic\":false}]"
+      ],
+      "minecraft:custom_model_data": { "floats": [5001] },
+      "minecraft:custom_data": { "nw_dye": 1 },
+      "minecraft:hide_additional_tooltip": {},
+      "minecraft:firework_explosion": {
+        "shape": "small_ball",
+        "colors": [16351261]
+      },
+      "minecraft:max_damage": 125,
+      "minecraft:damage": 0,
+      "minecraft:max_stack_size": 1
+    }
+  },
+  "group": "nw:dye_brush"
+}
