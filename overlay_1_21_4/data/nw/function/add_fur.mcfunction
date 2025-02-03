@@ -20,7 +20,7 @@ data modify storage nw:tmp new_fur_item."minecraft:unbreakable" set from storage
 data modify storage nw:tmp new_fur_display_components."minecraft:custom_data".display_comp set from storage nw:tmp new_fur_item
 
 ##some basic info
-data modify storage nw:tmp new_fur_comp."minecraft:consumable" set value {consume_seconds:100000.0f,animation:"none",sound:{sound_id:""},has_consume_particles:false}
+data modify storage nw:tmp new_fur_item."minecraft:consumable" set value {consume_seconds:100000.0f,animation:"none",sound:{sound_id:""},has_consume_particles:false}
 data modify storage nw:tmp new_fur_item."minecraft:hide_additional_tooltip" set value {}
 data modify storage nw:tmp new_fur_item."minecraft:custom_data".nw_fur set value 1b
 
