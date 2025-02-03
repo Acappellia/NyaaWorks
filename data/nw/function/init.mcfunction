@@ -15,7 +15,7 @@ scoreboard players set #10000 nw 10000
 scoreboard objectives add nw_version dummy
 #define score_holder #nw_version
 #define score_holder #current_version
-scoreboard players set #current_version nw_version 20004
+scoreboard players set #current_version nw_version 20100
 execute unless score #nw_version nw_version = #current_version nw_version run function nw:init_buildin_data
 scoreboard players operation #nw_version nw_version = #current_version nw_version
 
@@ -46,5 +46,7 @@ scoreboard objectives add fur_rotation dummy
 
 scoreboard objectives add nw_player_cd minecraft.custom:time_since_death
 scoreboard objectives add nw_place_cd minecraft.custom:time_since_death
+
+function nw:game_update
 
 schedule function nw:slowtick 20t replace

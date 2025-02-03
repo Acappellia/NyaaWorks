@@ -1,0 +1,1 @@
+scoreboard players set #nw_game_version nw 12103
