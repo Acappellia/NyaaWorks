@@ -1,12 +1,28 @@
 {
     "criteria": {
         "imp": {
-            "trigger": "impossible"
+            "trigger": "location"
         }
     },
     "rewards": {
         "recipes": [
             "nwr:guide_book",
+            "nw:brush_1",
+            "nw:brush_2",
+            "nw:brush_3",
+            "nw:brush_4",
+            "nw:brush_5",
+            "nw:brush_6",
+            "nw:brush_7",
+            "nw:brush_8",
+            "nw:brush_9",
+            "nw:brush_10",
+            "nw:brush_11",
+            "nw:brush_12",
+            "nw:brush_13",
+            "nw:brush_14",
+            "nw:brush_15",
+            "nw:brush_16",
             "nw:furniture_0",
             "nw:furniture_1_cut",
             "nw:furniture_2_cut",
