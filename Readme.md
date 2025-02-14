@@ -2,7 +2,7 @@
 
 # NyaaWorks 家具系统
 
-当前版本 r2.1 - Minecraft 1.21-1.21.3
+当前版本 r2.1 - Minecraft 1.21-1.21.4
 
 ## 功能简介
 
