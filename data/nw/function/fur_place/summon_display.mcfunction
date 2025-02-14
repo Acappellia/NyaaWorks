@@ -15,7 +15,7 @@ execute unless data storage nw:tmp fur_info.nw_fur_orient run function nw:fur_pl
 execute if data storage nw:tmp fur_info.nw_fur_orient run function nw:fur_place/orient_16
 
 ##move half block up
-data merge entity @s {transformation:[-2,0,0,0,0,2,0,1,0,0,-2,0,0,0,0,2],view_range:0.5}
+data merge entity @s {transformation:[-2,0,0,0,0,2,0,1,0,0,-2,0,0,0,0,2],view_range:0.5,item_display:"fixed"}
 
 ##add tag
 tag @s add nw_display
