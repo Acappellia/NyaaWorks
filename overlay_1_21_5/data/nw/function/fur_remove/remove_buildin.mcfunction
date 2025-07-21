@@ -9,7 +9,7 @@ function nw:fur_remove/clone_data_buildin with storage nw:tmp fur_info
 data remove storage nw:tmp new_fur_comp
 data modify storage nw:tmp new_fur_comp set from storage nw:tmp fur_comp."minecraft:custom_data".display_comp
 data modify storage nw:tmp new_fur_comp."minecraft:consumable" set value {consume_seconds:100000.0f,animation:"none",sound:{sound_id:""},has_consume_particles:false}
-data modify storage nw:tmp new_fur_comp."minecraft:hide_additional_tooltip" set value {}
+data modify storage nw:tmp new_fur_comp."minecraft:tooltip_display" set value {"hidden_components": ["fireworks", "firework_explosion"]}
 data modify storage nw:tmp new_fur_comp."minecraft:custom_data".nw_fur set value 1b
 
 ##set id & color

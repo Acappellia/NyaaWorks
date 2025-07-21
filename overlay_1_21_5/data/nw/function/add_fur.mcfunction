@@ -21,7 +21,7 @@ data modify storage nw:tmp new_fur_display_components."minecraft:custom_data".di
 
 ##some basic info
 data modify storage nw:tmp new_fur_item."minecraft:consumable" set value {consume_seconds:100000.0f,animation:"none",sound:{sound_id:""},has_consume_particles:false}
-data modify storage nw:tmp new_fur_item."minecraft:hide_additional_tooltip" set value {}
+data modify storage nw:tmp new_fur_item."minecraft:tooltip_display" set value {"hidden_components": ["fireworks", "firework_explosion"]}
 data modify storage nw:tmp new_fur_item."minecraft:custom_data".nw_fur set value 1b
 
 ##slot 9 - furniture orientation
