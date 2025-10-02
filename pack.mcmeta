@@ -3,8 +3,10 @@
         "pack_format": 48,
         "supported_formats":[
             48,
-            81
+            88
         ],
+        "min_format":48,
+        "max_format":88,
         "description": [
             {
                 "text": "【 NyaaWorks | 喵工坊 】",
@@ -24,17 +26,23 @@
         "entries": [
             {
                 "formats": 57,
-                "directory": "overlay_1_21_3"
+                "directory": "overlay_1_21_3",
+                "min_format": 57,
+                "max_format": 57
             },
             {
                 "formats": 61,
-                "directory": "overlay_1_21_4"
+                "directory": "overlay_1_21_4",
+                "min_format": 61,
+                "max_format": 61
             },
             {
                 "formats": [
                     71,
-                    81
+                    88
                 ],
+                "min_format": 71,
+                "max_format": 88,
                 "directory": "overlay_1_21_5"
             }
         ]
