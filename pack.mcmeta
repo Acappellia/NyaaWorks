@@ -17,7 +17,7 @@
                 "color": "blue"
             },
             {
-                "text": "r2.2-1.21.x",
+                "text": "r2.2.1beta-1.21.11",
                 "color": "gray"
             }
         ]
@@ -44,6 +44,15 @@
                 "min_format": 71,
                 "max_format": 88,
                 "directory": "overlay_1_21_5"
+            },
+            {
+                "formats": [
+                    94,
+                    94
+                ],
+                "min_format": 94,
+                "max_format": 94,
+                "directory": "overlay_1_21_11"
             }
         ]
     }

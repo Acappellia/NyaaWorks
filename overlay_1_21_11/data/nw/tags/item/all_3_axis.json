@@ -1,0 +1,16 @@
+{
+    "replace": false,
+    "values": [
+        "#minecraft:logs",
+        "bamboo_block",
+        "stripped_bamboo_block",
+        "deepslate",
+        "basalt",
+        "polished_basalt",
+        "purpur_pillar",
+        "iron_chain",
+        "quartz_pillar",
+        "hay_block"
+
+    ]
+}
