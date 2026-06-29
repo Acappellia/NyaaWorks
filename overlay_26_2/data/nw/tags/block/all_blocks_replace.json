@@ -1,0 +1,8 @@
+{
+    "replace": false,
+    "values": [
+        "#nw:air_blocks_replace",
+        "#nw:waterloggable_blocks_replace",
+        "#nw:water_blocks_replace"
+    ]
+}

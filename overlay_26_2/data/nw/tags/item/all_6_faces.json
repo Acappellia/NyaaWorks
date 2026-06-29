@@ -1,0 +1,17 @@
+{
+    "replace": false,
+    "values": [
+        "lightning_rod",
+        "end_rod",
+        "barrel",
+        "piston",
+        "sticky_piston",
+        "dispenser",
+        "dropper",
+        "observer",
+        "small_amethyst_bud",
+        "medium_amethyst_bud",
+        "large_amethyst_bud",
+        "amethyst_cluster"
+    ]
+}

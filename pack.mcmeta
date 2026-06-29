@@ -3,10 +3,10 @@
         "pack_format": 48,
         "supported_formats":[
             48,
-            94
+            107
         ],
         "min_format":48,
-        "max_format":94,
+        "max_format":107,
         "description": [
             {
                 "text": "【 NyaaWorks | 喵工坊 】",
@@ -17,7 +17,7 @@
                 "color": "blue"
             },
             {
-                "text": "r2.2.2beta",
+                "text": "r2.2.2beta-26.2dev",
                 "color": "gray"
             }
         ]
@@ -39,20 +39,29 @@
             {
                 "formats": [
                     71,
-                    94
+                    107
                 ],
                 "min_format": 71,
-                "max_format": 94,
+                "max_format": 107,
                 "directory": "overlay_1_21_5"
             },
             {
                 "formats": [
                     94,
-                    94
+                    107
                 ],
                 "min_format": 94,
-                "max_format": 94,
+                "max_format": 107,
                 "directory": "overlay_1_21_11"
+            },
+            {
+                "formats": [
+                    107,
+                    107
+                ],
+                "min_format": 107,
+                "max_format": 107,
+                "directory": "overlay_26_2"
             }
         ]
     }

@@ -1,0 +1,23 @@
+{
+    "replace": false,
+    "values": [
+        "#minecraft:logs",
+        "bamboo_block",
+        "stripped_bamboo_block",
+        "deepslate",
+        "basalt",
+        "polished_basalt",
+        "purpur_pillar",
+        "copper_chain",
+        "exposed_copper_chain",
+        "weathered_copper_chain",
+        "oxidized_copper_chain",
+        "waxed_copper_chain",
+        "waxed_exposed_copper_chain",
+        "waxed_weathered_copper_chain",
+        "waxed_oxidized_copper_chain",
+        "iron_chain",
+        "quartz_pillar",
+        "hay_block"
+    ]
+}

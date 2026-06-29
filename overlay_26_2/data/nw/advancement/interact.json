@@ -1,0 +1,24 @@
+{
+    "criteria": {
+        "break_fur_normal": {
+            "trigger": "player_interacted_with_entity",
+            "conditions": {
+                "entity": [
+                    {
+                        "condition": "entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "entity_type": [
+                                "interaction"
+                            ],
+                            "nbt": "{Tags:[\"nw_fur\"]}"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "nw:player_interact"
+    }
+}
